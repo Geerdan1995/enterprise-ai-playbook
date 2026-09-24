@@ -2,9 +2,9 @@
  * Book-PDF 生成脚本模板
  * 使用 Playwright 将合并后的 HTML 渲染为 A4 PDF
  *
- * 前置：先运行 node build.js 生成 HTML
+ * 前置：先运行 node scripts/build.js 生成 HTML
  * 依赖：npm install playwright && npx playwright install chromium
- * 用法：node build-pdf.js
+ * 用法：node scripts/build-pdf.js
  */
 
 const { chromium } = require('playwright');
@@ -12,8 +12,8 @@ const path = require('path');
 const fs = require('fs');
 
 const versionData = JSON.parse(fs.readFileSync(path.join(__dirname, 'version.json'), 'utf-8'));
-const HTML_FILE = path.join(__dirname, 'output', `${versionData.title}-v${versionData.version}.html`);
-const PDF_FILE = path.join(__dirname, 'output', `${versionData.title}-v${versionData.version}.pdf`);
+const HTML_FILE = path.join(__dirname, '..', 'output', `${versionData.title}-v${versionData.version}.html`);
+const PDF_FILE = path.join(__dirname, '..', 'output', `${versionData.title}-v${versionData.version}.pdf`);
 
 (async () => {
   console.log('🚀 Starting PDF generation...');

@@ -1,19 +1,19 @@
 #!/bin/bash
 # Book-PDF 版本更新脚本模板
 #
-# 用法：
-#   ./update.sh patch "修正某个错误"     # 修订：1.0.0 → 1.0.1
-#   ./update.sh minor "更新某部分内容"     # 次版本：1.0.0 → 1.1.0
-#   ./update.sh major "新增某个章节"       # 主版本：1.0.0 → 2.0.0
-#   ./update.sh build                      # 仅增加build号，不改版本
+# 用法（仓库任意位置均可）：
+#   scripts/update.sh patch "修正某个错误"     # 修订：1.0.0 → 1.0.1
+#   scripts/update.sh minor "更新某部分内容"     # 次版本：1.0.0 → 1.1.0
+#   scripts/update.sh major "新增某个章节"       # 主版本：1.0.0 → 2.0.0
+#   scripts/update.sh build                      # 仅增加build号，不改版本
 
 set -e
-cd "$(dirname "$0")"
+cd "$(dirname "$0")/.."
 
 BUMP_TYPE="${1:-build}"
 MESSAGE="${2:-无描述}"
 TODAY=$(date +%Y-%m-%d)
-VERSION_FILE="version.json"
+VERSION_FILE="scripts/version.json"
 CHANGELOG="CHANGELOG.md"
 
 # 读取当前版本
@@ -65,12 +65,12 @@ fi
 # 构建 HTML
 echo ""
 echo "🔨 构建 HTML..."
-node build.js
+node scripts/build.js
 
 # 构建 PDF
 echo ""
 echo "📄 生成 PDF..."
-node build-pdf.js
+node scripts/build-pdf.js
 
 # 读取标题用于文件名
 TITLE=$(node -e "console.log(require('./$VERSION_FILE').title)")

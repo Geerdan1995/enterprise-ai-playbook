@@ -5,8 +5,8 @@
   "description": "《大潮汹涌》——一本小说形式的企业 AI 落地手册。An enterprise AI playbook, told as a novel.",
   "scripts": {
     "compile": "python tools/manuscript.py compile",
-    "build": "node build.js",
-    "build:pdf": "node build-pdf.js",
+    "build": "node scripts/build.js",
+    "build:pdf": "node scripts/build-pdf.js",
     "book": "npm run compile && npm run build && npm run build:pdf"
   },
   "devDependencies": {

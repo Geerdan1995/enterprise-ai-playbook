@@ -4,7 +4,7 @@
 > An enterprise AI playbook, told as a novel.
 
 [![PDF 下载](https://img.shields.io/badge/PDF-下载-success.svg)](https://github.com/Geerdan1995/enterprise-ai-playbook/releases)
-[![Version](https://img.shields.io/badge/version-v4.4.9-blue.svg)](version.json)
+[![Version](https://img.shields.io/badge/version-v4.4.12-blue.svg)](scripts/version.json)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/正文-CC%20BY--NC--SA%204.0-green.svg)](LICENSE)
 [![License: MIT](https://img.shields.io/badge/代码-MIT-orange.svg)](LICENSE-CODE)
 
@@ -84,7 +84,7 @@
 
 ## 这本书是怎么写出来的
 
-这本书由作者与 AI 深度协作写成。从 v0.1 到 v4.4.9，每一次修订——改了什么、为什么改、原句和改句的逐字对照——都记录在 [CHANGELOG.md](CHANGELOG.md) 里，全程公开，欢迎围观。如果你关心「AI 到底能不能写长篇」，这个文件本身就是一份样本。
+这本书由作者与 AI 深度协作写成。从 v0.1 到 v4.4，每一次修订——改了什么、为什么改、原句和改句的逐字对照——都记录在 [CHANGELOG.md](CHANGELOG.md) 里，全程公开，欢迎围观。如果你关心「AI 到底能不能写长篇」，这个文件本身就是一份样本。
 
 ## 自己构建一本书
 
@@ -98,7 +98,7 @@ npx playwright install chromium   # PDF 导出用的浏览器内核
 
 npm run compile    # manuscript 的 md 编译成 fragments
 npm run build      # 合成整本 HTML 到 output/
-node build-pdf.js  # 导出 PDF
+npm run build:pdf  # 导出 PDF
 ```
 
 Windows 用户可以直接双击 `从MD构建.bat` 一键完成以上三步。
@@ -108,6 +108,7 @@ manuscript/   书的正文（Markdown 源，改书改这里）
 fragments/    编译中间产物（勿手改；封面/目录/封底三件手维）
 assets/       插图资产（矢量原件 widgets + 书内截图 shots）
 tools/        md 编译器与文风检查工具
+scripts/      构建脚本（HTML/PDF 生成、插图插入、版本发布、版本真源 version.json）
 output/       构建产物（不入库，从 Releases 拿成品）
 ```
 

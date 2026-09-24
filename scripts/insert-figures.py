@@ -9,7 +9,7 @@
 import io, os, sys
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-FRAG = os.path.join(ROOT, 'fragments')
+FRAG = os.path.join(ROOT, '..', 'fragments')
 IMG = '../assets/illustrations/shots/'
 
 # (fragment, 模式锚点, 图文件, 图题)

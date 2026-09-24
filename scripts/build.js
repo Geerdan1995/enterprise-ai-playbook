@@ -3,14 +3,14 @@
  * 将 fragments/ 目录下的 HTML 片段合并成完整的单页 HTML
  *
  * 使用前：修改 FRAGMENT_ORDER 和 <title> 为你的项目
- * 用法：node build.js
+ * 用法：node scripts/build.js（或仓库根目录 npm run build）
  */
 
 const fs = require('fs');
 const path = require('path');
 
-const FRAGMENTS_DIR = path.join(__dirname, 'fragments');
-const OUTPUT_DIR = path.join(__dirname, 'output');
+const FRAGMENTS_DIR = path.join(__dirname, '..', 'fragments');
+const OUTPUT_DIR = path.join(__dirname, '..', 'output');
 const CSS_FILE = path.join(__dirname, 'styles.css');
 const VERSION_FILE = path.join(__dirname, 'version.json');
 const versionData = JSON.parse(fs.readFileSync(VERSION_FILE, 'utf-8'));
