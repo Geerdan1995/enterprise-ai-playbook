@@ -1,0 +1,33 @@
+<style>
+:root { --text:#292524; --text-muted:#78716C; --border:rgba(41,37,36,0.14); --brand:#92400E; --brand-soft:#FBF3E4; --radius:8px; --radius-card:12px; --radius-full:999px; --s4:4px; --s8:8px; --s12:12px; --s16:16px; --s20:20px; --font:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif; }
+.widget { color:var(--text); font:400 14px/20px var(--font); width:100%; }
+.card { box-sizing:border-box; width:100%; background:#fff; border:1px solid var(--border); border-radius:var(--radius-card); padding:var(--s20); }
+.cols { display:grid; grid-template-columns:1fr auto 1fr; gap:var(--s16); align-items:stretch; }
+.col { border:1px solid var(--border); border-radius:var(--radius); padding:var(--s16); background:var(--surface); }
+.col[data-hot="1"] { border:1.5px solid var(--brand); background:var(--brand-soft); }
+.who { font:500 12px/18px var(--font); color:var(--text-muted); }
+.num { font:600 28px/36px var(--font); color:var(--text); margin:var(--s4) 0; }
+.col[data-hot="1"] .num { color:var(--brand); }
+.how { font:400 12px/18px var(--font); color:var(--text-muted); }
+.gap { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:var(--s4); }
+.gapNum { font:600 20px/28px var(--font); color:var(--brand); }
+.gapLbl { font:400 12px/18px var(--font); color:var(--text-muted); }
+.split { display:flex; flex-wrap:wrap; gap:var(--s8); margin-top:var(--s16); }
+.pill { display:inline-flex; gap:var(--s4); padding:var(--s4) var(--s12); background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-full); font:400 12px/18px var(--font); color:var(--text-muted); }
+.pill b { color:var(--text); font-weight:500; }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="comparison-cards">
+  <section class="card">
+    <div class="cols">
+      <div class="col"><div class="who">财务 · 开过票的法人</div><div class="num">387</div><div class="how">签合同、开发票、有回款，一家一个税号</div></div>
+      <div class="gap"><div class="gapNum">差 75</div><div class="gapLbl">差的都在销售口径里</div></div>
+      <div class="col" data-hot="1"><div class="who">销售 · 在跟的</div><div class="num">462</div><div class="how">各区域自己的"在跟"标准，边界说不清</div></div>
+    </div>
+    <div class="split">
+      <span class="pill"><b>集团分别走单</b>11 家</span>
+      <span class="pill"><b>跟过一年的意向</b>26 家</span>
+      <span class="pill"><b>走代理的终端</b>38 家</span>
+      <span class="pill">“谁能现在回答我？”——董鸿章（第1章）</span>
+    </div>
+  </section>
+</div>

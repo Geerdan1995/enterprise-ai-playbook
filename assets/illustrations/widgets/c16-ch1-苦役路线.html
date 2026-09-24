@@ -1,0 +1,39 @@
+<style>
+:root { --text:#292524; --text-muted:#57534E; --border:rgba(41,37,36,0.14); --brand:#92400E; --brand-soft:#FBF3E4; --radius:8px; --radius-card:12px; --s8:8px; --s16:16px; --s20:20px; --font:"Microsoft YaHei","PingFang SC",sans-serif; }
+.widget { color:var(--text); font:400 14px/20px var(--font); width:100%; }
+.card { box-sizing:border-box; width:100%; background:#fff; border:1px solid var(--border); border-radius:var(--radius-card); padding:var(--s16); }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="node-flow">
+  <section class="card">
+    <svg viewBox="0 0 680 280" style="width:684px;height:280px;display:block" role="img" aria-label="郑敏抱本子在四个系统之间来回跑">
+      <!-- 四座系统柜：四角 -->
+      <g font-family="Microsoft YaHei" font-size="12.5" fill="#292524">
+        <g><rect x="40" y="36" width="130" height="58" rx="6" fill="#FAF7F2" stroke="#A8A29E" stroke-width="1.4"/><text x="105" y="62" text-anchor="middle" font-weight="500">ERP</text><text x="105" y="82" text-anchor="middle" font-size="10.5" fill="#57534E">出厂序列号</text></g>
+        <g><rect x="510" y="36" width="130" height="58" rx="6" fill="#FAF7F2" stroke="#A8A29E" stroke-width="1.4"/><text x="575" y="62" text-anchor="middle" font-weight="500">MES</text><text x="575" y="82" text-anchor="middle" font-size="10.5" fill="#57534E">装配记录</text></g>
+        <g><rect x="40" y="186" width="130" height="58" rx="6" fill="#FAF7F2" stroke="#A8A29E" stroke-width="1.4"/><text x="105" y="212" text-anchor="middle" font-weight="500">质量系统</text><text x="105" y="232" text-anchor="middle" font-size="10.5" fill="#57534E">检验报告</text></g>
+        <g><rect x="510" y="186" width="130" height="58" rx="6" fill="#FAF7F2" stroke="#A8A29E" stroke-width="1.4"/><text x="575" y="212" text-anchor="middle" font-weight="500">档案室</text><text x="575" y="232" text-anchor="middle" font-size="10.5" fill="#57534E">纸质存根</text></g>
+      </g>
+
+      <!-- 奔走路线：绕成乱线团 -->
+      <g fill="none" stroke="#C0392B" stroke-width="1.6" stroke-dasharray="6 4">
+        <path d="M174 70 C 300 40, 420 46, 506 66"/>
+        <path d="M506 96 C 420 130, 200 120, 108 182"/>
+        <path d="M108 248 C 260 274, 460 268, 506 248"/>
+        <path d="M506 190 C 480 140, 300 96, 176 68"/>
+        <path d="M108 94 C 60 140, 60 180, 104 184"/>
+      </g>
+
+      <!-- 中央：郑敏与本子 -->
+      <g font-family="Microsoft YaHei">
+        <circle cx="340" cy="140" r="17" fill="#292524"/>
+        <circle cx="334" cy="136" r="2" fill="#fff"/><circle cx="346" cy="136" r="2" fill="#fff"/>
+        <path d="M334 156 L331 174 M346 156 L349 174" stroke="#292524" stroke-width="2.4" stroke-linecap="round"/>
+        <rect x="316" y="146" width="30" height="20" rx="2" fill="#FBF3E4" stroke="#92400E" stroke-width="1.4" transform="rotate(-6 331 156)"/>
+        <text x="340" y="204" font-size="12" fill="#292524" text-anchor="middle">郑敏的本子</text>
+      </g>
+
+      <!-- 标注 -->
+      <text x="340" y="252" font-size="11.5" fill="#57534E" text-anchor="middle" font-family="Microsoft YaHei">查一遍 · 抄一遍 · 对一遍 —— 对上的打钩，对不上的打电话问人</text>
+    </svg>
+  </section>
+</div>

@@ -1,0 +1,47 @@
+<style>
+:root { --text:#292524; --text-muted:#57534E; --border:rgba(41,37,36,0.14); --brand:#92400E; --brand-soft:#FBF3E4; --radius:8px; --radius-card:12px; --s8:8px; --s16:16px; --s20:20px; --font:"Microsoft YaHei","PingFang SC",sans-serif; }
+.widget { color:var(--text); font:400 14px/20px var(--font); width:100%; }
+.card { box-sizing:border-box; width:100%; background:#fff; border:1px solid var(--border); border-radius:var(--radius-card); padding:var(--s16); }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="architecture-elements">
+  <section class="card">
+    <svg viewBox="0 0 680 300" style="width:684px;height:300px;display:block" role="img" aria-label="条目卡底下挂着一根声波">
+      <!-- 条目卡：四栏 -->
+      <g font-family="Microsoft YaHei">
+        <g>
+          <rect x="60" y="36" width="132" height="60" rx="6" fill="#FAF7F2" stroke="#A8A29E" stroke-width="1.3"/>
+          <text x="126" y="60" font-size="11" fill="#57534E" text-anchor="middle">症状</text>
+          <text x="126" y="82" font-size="12.5" fill="#292524" text-anchor="middle" font-weight="500">闷响，过去又回来</text>
+        </g>
+        <g>
+          <rect x="212" y="36" width="132" height="60" rx="6" fill="#FAF7F2" stroke="#A8A29E" stroke-width="1.3"/>
+          <text x="278" y="60" font-size="11" fill="#57534E" text-anchor="middle">部位</text>
+          <text x="278" y="82" font-size="12.5" fill="#292524" text-anchor="middle" font-weight="500">输出轴轴承</text>
+        </g>
+        <g>
+          <rect x="364" y="36" width="132" height="60" rx="6" fill="#FAF7F2" stroke="#A8A29E" stroke-width="1.3"/>
+          <text x="430" y="60" font-size="11" fill="#57534E" text-anchor="middle">原因</text>
+          <text x="430" y="82" font-size="12.5" fill="#292524" text-anchor="middle" font-weight="500">游隙预紧偏了</text>
+        </g>
+        <g>
+          <rect x="516" y="36" width="120" height="60" rx="6" fill="#FAF7F2" stroke="#A8A29E" stroke-width="1.3"/>
+          <text x="576" y="60" font-size="11" fill="#57534E" text-anchor="middle">方案</text>
+          <text x="576" y="82" font-size="12.5" fill="#292524" text-anchor="middle" font-weight="500">复测两遍，记两班</text>
+        </g>
+      </g>
+
+      <!-- 从条目卡底下垂下的挂绳 + 声波牌 -->
+      <path d="M340 96 V 132" fill="none" stroke="#92400E" stroke-width="1.6"/>
+      <circle cx="340" cy="138" r="5" fill="#FBF3E4" stroke="#92400E" stroke-width="1.6"/>
+      <!-- 声波牌 -->
+      <rect x="130" y="148" width="420" height="94" rx="8" fill="#FBF3E4" stroke="#92400E" stroke-width="1.8"/>
+      <text x="152" y="174" font-size="12" fill="#92400E" font-family="Microsoft YaHei" font-weight="600">原声 · 8 分 42 秒</text>
+      <text x="528" y="174" font-size="11" fill="#57534E" text-anchor="end" font-family="Microsoft YaHei">2026 年 6 月录，头一回</text>
+      <!-- 波形 -->
+      <path d="M152 210 C 168 190, 178 228, 194 210 S 222 194, 238 210 S 266 226, 282 210 S 310 192, 326 210 S 354 224, 370 210 S 398 196, 414 210 S 442 222, 458 210 S 486 200, 502 210 S 524 216, 530 210" fill="none" stroke="#92400E" stroke-width="1.8" stroke-linecap="round"/>
+
+      <!-- 底注（定位标注） -->
+      <text x="340" y="278" font-size="12" fill="#57534E" text-anchor="middle" font-family="Microsoft YaHei">129 条条目 · 44 回原声挂底下 · 第21章</text>
+    </svg>
+  </section>
+</div>

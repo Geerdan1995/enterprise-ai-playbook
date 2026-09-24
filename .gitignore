@@ -1,0 +1,33 @@
+# ===== 构建产物与历史版本（体积大，成品从 Releases 分发）=====
+output/
+versions/
+
+# ===== 第三方版权材料（出于版权原因不随仓库分发）=====
+参考资料/
+dj_chapters/
+zz_chapters/
+
+# ===== 内部研究与协作件（不公开）=====
+research/
+.zcode/
+.zcodeignore
+AGENTS.md
+HANDOFF.md
+HANDOFF-v1.0-archive.md
+PROJECT.md
+改稿说明.md
+
+# ===== 已退役的本地编辑器 =====
+editor/
+启动编辑器.bat
+老唐编辑器.lnk
+
+# ===== 临时与系统文件 =====
+_tmp_renum.py
+nul
+__pycache__/
+*.pyc
+node_modules/
+package-lock.json
+Thumbs.db
+.DS_Store

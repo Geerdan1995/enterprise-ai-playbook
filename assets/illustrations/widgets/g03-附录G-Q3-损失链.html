@@ -1,0 +1,50 @@
+<style>
+:root { --text:#292524; --text-muted:#57534E; --border:rgba(41,37,36,0.14); --brand:#92400E; --brand-soft:#FBF3E4; --font:"Microsoft YaHei","PingFang SC",sans-serif; }
+.widget { color:var(--text); font:400 14px/20px var(--font); width:100%; }
+.card { box-sizing:border-box; width:100%; background:#fff; border:1px solid var(--border); border-radius:12px; padding:12px 0 10px; }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="explanation-panel">
+  <section class="card">
+    <svg viewBox="0 0 680 108" style="width:684px;height:108px;display:block" role="img" aria-label="NO.8拆流程拆出的损失链">
+      <defs>
+        <marker id="arr3" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto">
+          <path d="M1 1 L7 4 L1 7 Z" fill="#A8A29E"/>
+        </marker>
+      </defs>
+      <g font-family="Microsoft YaHei" text-anchor="middle">
+        <!-- 七环链：x起点10，每环节82宽+间隙14 -->
+        <rect x="10" y="30" width="82" height="30" rx="7" fill="#FAFAF9" stroke="rgba(41,37,36,0.16)"/>
+        <text x="51" y="49" font-size="11" font-weight="600" fill="#57534E">搜索困难</text>
+        <line x1="92" y1="45" x2="106" y2="45" stroke="#A8A29E" stroke-width="1.6" marker-end="url(#arr3)"/>
+
+        <rect x="106" y="30" width="82" height="30" rx="7" fill="#FAFAF9" stroke="rgba(41,37,36,0.16)"/>
+        <text x="147" y="49" font-size="11" font-weight="600" fill="#57534E">重复录入</text>
+        <line x1="188" y1="45" x2="202" y2="45" stroke="#A8A29E" stroke-width="1.6" marker-end="url(#arr3)"/>
+
+        <rect x="202" y="30" width="82" height="30" rx="7" fill="#FAFAF9" stroke="rgba(41,37,36,0.16)"/>
+        <text x="243" y="49" font-size="11" font-weight="600" fill="#57534E">数据污染</text>
+        <line x1="284" y1="45" x2="298" y2="45" stroke="#A8A29E" stroke-width="1.6" marker-end="url(#arr3)"/>
+
+        <rect x="298" y="30" width="82" height="30" rx="7" fill="#FAFAF9" stroke="rgba(41,37,36,0.16)"/>
+        <text x="339" y="49" font-size="11" font-weight="600" fill="#57534E">错误采购</text>
+        <line x1="380" y1="45" x2="394" y2="45" stroke="#A8A29E" stroke-width="1.6" marker-end="url(#arr3)"/>
+
+        <rect x="394" y="30" width="82" height="30" rx="7" fill="#FAFAF9" stroke="rgba(41,37,36,0.16)"/>
+        <text x="435" y="49" font-size="11" font-weight="600" fill="#57534E">库存积压</text>
+        <line x1="476" y1="45" x2="490" y2="45" stroke="#A8A29E" stroke-width="1.6" marker-end="url(#arr3)"/>
+
+        <rect x="490" y="30" width="82" height="30" rx="7" fill="#FAFAF9" stroke="rgba(41,37,36,0.16)"/>
+        <text x="531" y="49" font-size="11" font-weight="600" fill="#57534E">最终报废</text>
+        <line x1="572" y1="45" x2="586" y2="45" stroke="#A8A29E" stroke-width="1.6" marker-end="url(#arr3)"/>
+
+        <rect x="586" y="30" width="84" height="30" rx="7" fill="#292524"/>
+        <text x="628" y="49" font-size="11" font-weight="600" fill="#FAF7F2">财务损失</text>
+
+        <!-- 起点与终点标注 -->
+        <text x="51" y="82" font-size="9" fill="#A8A29E">找得到的问题</text>
+        <text x="628" y="82" font-size="9" fill="#92400E">追到值多少钱</text>
+        <text x="10" y="16" font-size="9.5" fill="#78716C" text-anchor="start">NO.8 · 工业采购</text>
+      </g>
+    </svg>
+  </section>
+</div>

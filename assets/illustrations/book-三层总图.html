@@ -1,0 +1,97 @@
+<style>
+:root {
+  color-scheme: light;
+  --surface: #FAF7F2;
+  --surface-muted: #F3EEE5;
+  --text: #292524;
+  --text-muted: #78716C;
+  --border: rgba(41, 37, 36, 0.14);
+  --brand: #92400E;
+  --brand-soft: #FBF3E4;
+  --brand-text: #7C3A0B;
+  --radius: 8px;
+  --radius-card: 12px;
+  --radius-full: 999px;
+  --spacer-4: 4px; --spacer-8: 8px; --spacer-12: 12px; --spacer-16: 16px; --spacer-20: 20px;
+  --font-sans: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --weight-regular: 400; --weight-medium: 500; --weight-strong: 600;
+  --text-caption: 12px/18px; --text-body: 14px/20px; --text-title: 16px/24px;
+}
+.widget { color: var(--text); background: transparent; font: var(--weight-regular) var(--text-body) var(--font-sans); width: 100%; }
+.card { box-sizing: border-box; width: 100%; background: #FFFFFF; border: 1px solid var(--border); border-radius: var(--radius-card); padding: var(--spacer-20); }
+.title { margin: 0 0 var(--spacer-16); color: var(--text); font: var(--weight-medium) var(--text-title) var(--font-sans); }
+.layer { box-sizing: border-box; border: 1px dashed var(--border); border-radius: var(--radius); padding: var(--spacer-16); background: var(--surface); }
+.layerHead { display: flex; align-items: baseline; gap: var(--spacer-8); flex-wrap: wrap; }
+.layerName { color: var(--text); font: var(--weight-strong) var(--text-body) var(--font-sans); }
+.layerJob { color: var(--text-muted); font: var(--weight-regular) var(--text-caption) var(--font-sans); }
+.pills { display: flex; flex-wrap: wrap; gap: var(--spacer-8); margin-top: var(--spacer-12); }
+.pill { display: inline-flex; align-items: baseline; gap: var(--spacer-4); padding: var(--spacer-4) var(--spacer-12); background: #FFFFFF; border: 1px solid var(--border); border-radius: var(--radius-full); }
+.pill b { color: var(--text); font: var(--weight-medium) var(--text-caption) var(--font-sans); }
+.pill span { color: var(--text-muted); font: var(--weight-regular) var(--text-caption) var(--font-sans); }
+.layer[data-focus="brand"] { border: 1.5px solid var(--brand); background: var(--brand-soft); }
+.layer[data-focus="brand"] .layerName { color: var(--brand-text); }
+.edge { display: grid; grid-template-columns: 24px 1fr; align-items: center; gap: var(--spacer-12); padding: var(--spacer-8) 0 var(--spacer-8) var(--spacer-24); }
+.edgeSvg { width: 24px; height: 52px; overflow: visible; }
+.edgePath { fill: none; stroke: var(--text-muted); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.edgeLabel { justify-self: start; display: inline-flex; padding: var(--spacer-4) var(--spacer-12); background: #FFFFFF; border: 1px solid var(--border); border-radius: var(--radius-full); color: var(--text); font: var(--weight-medium) var(--text-caption) var(--font-sans); }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="architecture-elements">
+  <section class="card" aria-label="知识图谱与本体论三层结构">
+    <h3 class="title">总目在上，卡在中间，应用在下</h3>
+
+    <section class="layer" aria-label="本体层">
+      <div class="layerHead"><span class="layerName">本体</span><span class="layerJob">定规矩的一层：哪些词算数，什么关系合法</span></div>
+      <div class="pills">
+        <span class="pill"><b>词</b><span>东西的正式名</span></span>
+        <span class="pill"><b>代</b><span>别名归到正式名下</span></span>
+        <span class="pill"><b>注</b><span>指什么，不指什么</span></span>
+        <span class="pill"><b>属分</b><span>谁归谁管</span></span>
+        <span class="pill"><b>凭据</b><span>立词的证据</span></span>
+      </div>
+    </section>
+
+    <div class="edge" aria-label="约束：用总目的词记">
+      <svg class="edgeSvg" viewBox="0 0 24 52" aria-hidden="true">
+        <defs>
+          <marker id="bArrA" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto">
+            <path d="M1 1 L7 4 L1 7 Z" fill="#78716C"/>
+          </marker>
+        </defs>
+        <path class="edgePath" d="M12 4 V44" marker-end="url(#bArrA)"/>
+      </svg>
+      <span class="edgeLabel">各口记账，都用总目的词</span>
+    </div>
+
+    <section class="layer" data-focus="brand" aria-label="知识图谱层">
+      <div class="layerHead"><span class="layerName">知识图谱</span><span class="layerJob">装事实的一层：各口的卡和账，连成一张网</span></div>
+      <div class="pills">
+        <span class="pill"><b>节点</b><span>机器、批次、供应商</span></span>
+        <span class="pill"><b>边</b><span>供应、装配、发货</span></span>
+        <span class="pill"><b>条目</b><span>听音经验 129 条</span></span>
+        <span class="pill"><b>原声</b><span>录音 44 回</span></span>
+      </div>
+    </section>
+
+    <div class="edge" aria-label="约束：能重演才有下一层">
+      <svg class="edgeSvg" viewBox="0 0 24 52" aria-hidden="true">
+        <defs>
+          <marker id="bArrB" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto">
+            <path d="M1 1 L7 4 L1 7 Z" fill="#78716C"/>
+          </marker>
+        </defs>
+        <path class="edgePath" d="M12 4 V44" marker-end="url(#bArrB)"/>
+      </svg>
+      <span class="edgeLabel">图要能重演，才算数</span>
+    </div>
+
+    <section class="layer" aria-label="应用层">
+      <div class="layerHead"><span class="layerName">应用</span><span class="layerJob">用图的一层：四个用法</span></div>
+      <div class="pills">
+        <span class="pill"><b>问答</b><span>答必带出处</span></span>
+        <span class="pill"><b>追溯</b><span>任抽一台走全链</span></span>
+        <span class="pill"><b>看板</b><span>异常提前亮牌</span></span>
+        <span class="pill"><b>审核</b><span>缺，答得出缺在哪</span></span>
+      </div>
+    </section>
+  </section>
+</div>

@@ -1,0 +1,78 @@
+<style>
+:root { --text:#292524; --text-muted:#57534E; --border:rgba(41,37,36,0.14); --brand:#92400E; --brand-soft:#FBF3E4; --font:"Microsoft YaHei","PingFang SC",sans-serif; }
+.widget { color:var(--text); font:400 14px/20px var(--font); width:100%; }
+.card { box-sizing:border-box; width:100%; background:#fff; border:1px solid var(--border); border-radius:12px; padding:10px 0 8px; }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="explanation-panel">
+  <section class="card">
+    <svg viewBox="0 0 680 196" style="width:684px;height:196px;display:block" role="img" aria-label="入口的五种形态">
+      <defs>
+        <marker id="arr5" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto">
+          <path d="M1 1 L7 4 L1 7 Z" fill="#B45309"/>
+        </marker>
+      </defs>
+      <g font-family="Microsoft YaHei" text-anchor="middle">
+        <!-- 五张卡：y=26，高134（底=160） -->
+        <!-- 1 对话框 -->
+        <rect x="10" y="26" width="124" height="134" rx="9" fill="#FAFAF9" stroke="rgba(41,37,36,0.14)"/>
+        <rect x="52" y="44" width="40" height="32" rx="9" fill="#fff" stroke="#A8A29E" stroke-width="1.4"/>
+        <circle cx="62" cy="58" r="2" fill="#A8A29E"/>
+        <circle cx="72" cy="58" r="2" fill="#A8A29E"/>
+        <rect x="58" y="66" width="28" height="5" rx="2" fill="#E7E5E4"/>
+        <text x="72" y="106" font-size="12" font-weight="600" fill="#292524">对话框</text>
+        <text x="72" y="124" font-size="9" fill="#78716C">NO.16 电信分析师</text>
+        <text x="72" y="142" font-size="9" fill="#78716C">活本来就是问答</text>
+
+        <!-- 2 工作台（带转弯：对话框→工作台） -->
+        <rect x="144" y="26" width="124" height="134" rx="9" fill="#FBF3E4" stroke="rgba(146,64,14,0.30)"/>
+        <rect x="156" y="44" width="100" height="36" rx="4" fill="#fff" stroke="rgba(146,64,14,0.35)" stroke-width="1.2"/>
+        <line x1="156" y1="56" x2="256" y2="56" stroke="rgba(146,64,14,0.20)" stroke-width="1"/>
+        <rect x="160" y="48" width="34" height="5" rx="2" fill="#EDE0CB"/>
+        <rect x="160" y="62" width="52" height="4" rx="2" fill="#F3EADC"/>
+        <rect x="160" y="70" width="40" height="4" rx="2" fill="#F3EADC"/>
+        <text x="168" y="96" font-size="8.5" fill="#92400E">对话框</text>
+        <path d="M 172 102 L 190 102 L 190 106 L 200 106" stroke="#B45309" stroke-width="1.6" fill="none" marker-end="url(#arr5)"/>
+        <text x="228" y="122" font-size="12" font-weight="600" fill="#292524">工作台</text>
+        <text x="206" y="138" font-size="9" fill="#78716C">NO.3 律所·法索</text>
+        <text x="206" y="154" font-size="9" fill="#78716C">先建案·再开口</text>
+
+        <!-- 3 一张纸 -->
+        <rect x="278" y="26" width="124" height="134" rx="9" fill="#FAFAF9" stroke="rgba(41,37,36,0.14)"/>
+        <path d="M 316 44 L 352 44 L 360 52 L 360 80 L 316 80 Z" fill="#fff" stroke="#A8A29E" stroke-width="1.3"/>
+        <line x1="322" y1="54" x2="354" y2="54" stroke="#E7E5E4" stroke-width="2"/>
+        <line x1="322" y1="61" x2="348" y2="61" stroke="#E7E5E4" stroke-width="2"/>
+        <line x1="322" y1="68" x2="352" y2="68" stroke="#E7E5E4" stroke-width="2"/>
+        <rect x="328" y="86" width="26" height="16" rx="2" fill="none" stroke="#B45309" stroke-width="1.2"/>
+        <text x="340" y="120" font-size="12" font-weight="600" fill="#292524">一张纸</text>
+        <text x="340" y="136" font-size="9" fill="#78716C">NO.6 装车指导图</text>
+        <text x="340" y="152" font-size="9" fill="#78716C">手上腾不出屏幕</text>
+
+        <!-- 4 小程序 -->
+        <rect x="412" y="26" width="124" height="134" rx="9" fill="#FAFAF9" stroke="rgba(41,37,36,0.14)"/>
+        <rect x="454" y="42" width="40" height="44" rx="7" fill="#fff" stroke="#A8A29E" stroke-width="1.4"/>
+        <rect x="460" y="48" width="28" height="6" rx="2" fill="#EDE0CB"/>
+        <rect x="460" y="58" width="16" height="12" rx="2" fill="#F3EADC"/>
+        <rect x="480" y="58" width="8" height="12" rx="2" fill="#F3EADC"/>
+        <rect x="460" y="74" width="28" height="4" rx="2" fill="#E7E5E4"/>
+        <circle cx="474" cy="92" r="2.4" fill="none" stroke="#A8A29E" stroke-width="1"/>
+        <text x="474" y="116" font-size="12" font-weight="600" fill="#292524">小程序</text>
+        <text x="474" y="132" font-size="9" fill="#78716C">NO.23 工程租赁</text>
+        <text x="474" y="148" font-size="9" fill="#78716C">工地上·入口要轻</text>
+
+        <!-- 5 地图 -->
+        <rect x="546" y="26" width="124" height="134" rx="9" fill="#FAFAF9" stroke="rgba(41,37,36,0.14)"/>
+        <rect x="588" y="42" width="44" height="44" rx="3" fill="#fff" stroke="#A8A29E" stroke-width="1.3"/>
+        <path d="M 594 78 L 606 58 L 618 66 L 630 50" stroke="#B45309" stroke-width="1.6" fill="none"/>
+        <circle cx="630" cy="50" r="2.6" fill="#B45309"/>
+        <rect x="602" y="90" width="34" height="12" rx="2" fill="#FBF3E4" stroke="rgba(146,64,14,0.3)" stroke-width="0.8"/>
+        <text x="610" y="120" font-size="12" font-weight="600" fill="#292524">地图</text>
+        <text x="610" y="136" font-size="9" fill="#78716C">NO.4 规划院</text>
+        <text x="610" y="152" font-size="9" fill="#78716C">辅助的放旁边</text>
+
+        <!-- 底部总标注 -->
+        <text x="340" y="180" font-size="9.5" fill="#92400E">入口跟着员工手边长</text>
+        <text x="640" y="180" font-size="9" fill="#A8A29E">第四步 · 嵌回流程</text>
+      </g>
+    </svg>
+  </section>
+</div>

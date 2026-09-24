@@ -1,0 +1,33 @@
+<style>
+:root { --text:#292524; --text-muted:#78716C; --border:rgba(41,37,36,0.14); --brand:#92400E; --brand-soft:#FBF3E4; --radius:8px; --radius-card:12px; --radius-full:999px; --s4:4px; --s8:8px; --s12:12px; --s16:16px; --s20:20px; --font:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif; }
+.widget { color:var(--text); font:400 14px/20px var(--font); width:100%; }
+.card { box-sizing:border-box; width:100%; background:#fff; border:1px solid var(--border); border-radius:var(--radius-card); padding:var(--s20); }
+.ledger { display:grid; grid-template-columns:repeat(3,1fr); gap:var(--s12); }
+.acct { border:1px solid var(--border); border-radius:var(--radius); padding:var(--s12); background:var(--surface); }
+.acct b { display:block; font:500 13px/20px var(--font); color:var(--text); }
+.acct span { display:block; margin-top:var(--s4); font:400 11px/16px var(--font); color:var(--text-muted); }
+.clash { margin-top:var(--s16); border:1.5px solid var(--brand); border-radius:var(--radius); background:var(--brand-soft); padding:var(--s12) var(--s16); display:flex; align-items:center; gap:var(--s16); flex-wrap:wrap; }
+.vs { display:flex; align-items:baseline; gap:var(--s8); }
+.vs .n { font:600 18px/26px var(--font); color:var(--brand-text); }
+.vs .l { font:400 11px/16px var(--font); color:var(--text-muted); }
+.diff { font:500 13px/20px var(--font); color:var(--brand); }
+.foot { margin-top:var(--s12); font:400 12px/18px var(--font); color:var(--text-muted); }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="architecture-elements">
+  <section class="card">
+    <div class="ledger">
+      <div class="acct"><b>口径页</b><span>质量部服务器</span></div>
+      <div class="acct"><b>核销口径表 · 17 条</b><span>财务</span></div>
+      <div class="acct"><b>故障知识库</b><span>售后</span></div>
+      <div class="acct"><b>报价规则本 · 67 条</b><span>技术部老秦</span></div>
+      <div class="acct"><b>出入登记簿 · 第 31 本</b><span>三号库</span></div>
+      <div class="acct"><b>编码映射本 · 137 行</b><span>赵峰桌上</span></div>
+    </div>
+    <div class="clash">
+      <span class="vs"><span class="n">260 万</span><span class="l">档案账</span></span>
+      <span class="vs"><span class="n">380 万</span><span class="l">流水账</span></span>
+      <span class="diff">差 120 万 —— 查无对照</span>
+    </div>
+    <div class="foot">六本账，本本都对。凑到一块儿，没有一本是对的（第13章）</div>
+  </section>
+</div>

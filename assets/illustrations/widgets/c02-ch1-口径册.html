@@ -1,0 +1,81 @@
+<style>
+:root { --text:#292524; --text-muted:#57534E; --border:rgba(41,37,36,0.14); --brand:#92400E; --brand-soft:#FBF3E4; --surface:#FAF7F2; --radius:8px; --radius-card:12px; --s8:8px; --s16:16px; --s20:20px; --font:"Microsoft YaHei","PingFang SC",sans-serif; }
+.widget { color:var(--text); font:400 14px/20px var(--font); width:100%; }
+.card { box-sizing:border-box; width:100%; background:#fff; border:1px solid var(--border); border-radius:var(--radius-card); padding:var(--s20); }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="explanation-panel">
+  <section class="card">
+    <svg viewBox="20 22 644 262" style="width:684px;height:278.3px;display:block" role="img" aria-label="两本账之间悬着的75家">
+      <defs>
+        <marker id="d1" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto">
+          <path d="M1 1 L7 4 L1 7 Z" fill="#57534E"/>
+        </marker>
+      </defs>
+
+      <!-- 左册：财务账 -->
+      <g>
+        <rect x="36" y="52" width="180" height="210" rx="6" fill="#F3EEE5" stroke="#78716C" stroke-width="1.6"/>
+        <line x1="126" y1="52" x2="126" y2="262" stroke="#A8A29E" stroke-width="1.2"/>
+        <!-- 格网（左页示意） -->
+        <g stroke="#C9C2B8" stroke-width="0.8">
+          <line x1="52" y1="86" x2="112" y2="86"/><line x1="52" y1="112" x2="112" y2="112"/><line x1="52" y1="138" x2="112" y2="138"/><line x1="52" y1="164" x2="112" y2="164"/>
+          <line x1="52" y1="66" x2="52" y2="190"/><line x1="82" y1="66" x2="82" y2="190"/><line x1="112" y1="66" x2="112" y2="190"/>
+        </g>
+        <!-- 税号签：部分格里有 -->
+        <g fill="#DDD6CE" stroke="#A8A29E" stroke-width="0.7">
+          <rect x="56" y="70" width="10" height="12" rx="1"/><rect x="86" y="70" width="10" height="12" rx="1"/>
+          <rect x="56" y="96" width="10" height="12" rx="1"/><rect x="86" y="96" width="10" height="12" rx="1"/>
+          <rect x="56" y="122" width="10" height="12" rx="1"/>
+          <rect x="140" y="70" width="10" height="12" rx="1"/><rect x="170" y="70" width="10" height="12" rx="1"/>
+          <rect x="140" y="96" width="10" height="12" rx="1"/>
+        </g>
+        <text x="126" y="226" font-size="12" fill="#57534E" text-anchor="middle" font-family="Noto Sans SC">开过票的法人</text>
+        <text x="126" y="248" font-size="20" font-weight="600" fill="#292524" text-anchor="middle" font-family="Noto Sans SC">387</text>
+      </g>
+
+      <!-- 右册：销售账 -->
+      <g>
+        <rect x="464" y="52" width="180" height="210" rx="6" fill="#F3EEE5" stroke="#78716C" stroke-width="1.6"/>
+        <line x1="554" y1="52" x2="554" y2="262" stroke="#A8A29E" stroke-width="1.2"/>
+        <!-- 人群块：密 -->
+        <g fill="#DDD6CE" stroke="#A8A29E" stroke-width="0.7">
+          <rect x="470" y="66" width="20" height="16" rx="2"/><rect x="496" y="66" width="20" height="16" rx="2"/><rect x="522" y="66" width="20" height="16" rx="2"/>
+          <rect x="470" y="90" width="20" height="16" rx="2"/><rect x="496" y="90" width="20" height="16" rx="2"/><rect x="522" y="90" width="20" height="16" rx="2"/>
+          <rect x="470" y="114" width="20" height="16" rx="2"/><rect x="496" y="114" width="20" height="16" rx="2"/>
+          <rect x="578" y="66" width="20" height="16" rx="2"/><rect x="604" y="66" width="20" height="16" rx="2"/>
+          <rect x="578" y="90" width="20" height="16" rx="2"/><rect x="604" y="90" width="20" height="16" rx="2"/>
+          <rect x="578" y="114" width="20" height="16" rx="2"/>
+        </g>
+        <text x="554" y="226" font-size="12" fill="#57534E" text-anchor="middle" font-family="Noto Sans SC">各区域的"在跟"</text>
+        <text x="554" y="248" font-size="20" font-weight="600" fill="#292524" text-anchor="middle" font-family="Noto Sans SC">462</text>
+      </g>
+
+      <!-- 中间：75 个悬空红块（示意 13 块 + 省略），分三簇 -->
+      <g>
+        <!-- 簇1：集团走单 11 -->
+        <g fill="#FDE8E4" stroke="#C0392B" stroke-width="1.1" stroke-dasharray="3 2">
+          <rect x="262" y="70" width="20" height="16" rx="2"/><rect x="288" y="70" width="20" height="16" rx="2"/><rect x="314" y="70" width="20" height="16" rx="2"/><rect x="340" y="70" width="20" height="16" rx="2"/>
+        </g>
+        <text x="306" y="62" font-size="10.5" fill="#C0392B" text-anchor="middle" font-family="Noto Sans SC">集团下分别走单 · 11 家</text>
+        <!-- 簇2：意向 26 -->
+        <g fill="#FDE8E4" stroke="#C0392B" stroke-width="1.1" stroke-dasharray="3 2">
+          <rect x="262" y="130" width="20" height="16" rx="2"/><rect x="288" y="130" width="20" height="16" rx="2"/><rect x="314" y="130" width="20" height="16" rx="2"/>
+          <rect x="262" y="152" width="20" height="16" rx="2"/><rect x="288" y="152" width="20" height="16" rx="2"/>
+        </g>
+        <text x="300" y="122" font-size="10.5" fill="#C0392B" text-anchor="middle" font-family="Noto Sans SC">跟了一年以上的意向 · 26 家</text>
+        <!-- 簇3：代理终端 38 -->
+        <g fill="#FDE8E4" stroke="#C0392B" stroke-width="1.1" stroke-dasharray="3 2">
+          <rect x="356" y="196" width="20" height="16" rx="2"/><rect x="382" y="196" width="20" height="16" rx="2"/><rect x="356" y="218" width="20" height="16" rx="2"/>
+        </g>
+        <text x="368" y="188" font-size="10.5" fill="#C0392B" text-anchor="middle" font-family="Noto Sans SC">走代理的终端 · 38 家</text>
+        <!-- 省略号 -->
+        <text x="256" y="248" font-size="16" fill="#C0392B" font-family="Noto Sans SC">……</text>
+        <text x="306" y="248" font-size="12" fill="#C0392B" text-anchor="middle" font-family="Noto Sans SC" font-weight="600">共 75 家，两本账都对不上号</text>
+      </g>
+
+      <!-- 两册到中间的虚引导 -->
+      <path d="M222 140 C 244 120, 246 100, 258 84" fill="none" stroke="#A8A29E" stroke-width="1.2" stroke-dasharray="4 4" marker-end="url(#d1)"/>
+      <path d="M458 140 C 436 160, 430 190, 420 208" fill="none" stroke="#A8A29E" stroke-width="1.2" stroke-dasharray="4 4" marker-end="url(#d1)"/>
+    </svg>
+  </section>
+</div>

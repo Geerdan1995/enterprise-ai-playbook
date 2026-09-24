@@ -1,0 +1,68 @@
+<style>
+:root { --text:#292524; --text-muted:#57534E; --border:rgba(41,37,36,0.14); --brand:#92400E; --brand-soft:#FBF3E4; --radius:8px; --radius-card:12px; --s8:8px; --s16:16px; --s20:20px; --font:"Microsoft YaHei","PingFang SC",sans-serif; }
+.widget { color:var(--text); font:400 14px/20px var(--font); width:100%; }
+.card { box-sizing:border-box; width:100%; background:#fff; border:1px solid var(--border); border-radius:var(--radius-card); padding:var(--s16); }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="sequence-diagram">
+  <section class="card">
+    <svg viewBox="0 0 680 380" style="width:684px;height:380px;display:block" role="img" aria-label="五张单据钉成一串，笔尖停在试车单">
+      <!-- 串绳 -->
+      <line x1="120" y1="20" x2="120" y2="356" stroke="#A8A29E" stroke-width="1.6"/>
+
+      <!-- 单1：出厂 -->
+      <g>
+        <rect x="96" y="24" width="200" height="46" rx="5" fill="#FAF7F2" stroke="#A8A29E" stroke-width="1.3"/>
+        <text x="112" y="44" font-size="11" fill="#57534E" font-family="Microsoft YaHei">出厂</text>
+        <text x="112" y="61" font-size="12.5" fill="#292524" font-family="Microsoft YaHei" font-weight="500">JS-1100 · 2304226</text>
+        <circle cx="120" cy="24" r="4" fill="#78716C"/>
+      </g>
+      <path d="M230 47 H296" fill="none" stroke="#A8A29E" stroke-width="1.2" marker-end="url(#s1)"/>
+      <!-- 单2：装配 -->
+      <g>
+        <rect x="300" y="24" width="200" height="46" rx="5" fill="#FAF7F2" stroke="#A8A29E" stroke-width="1.3"/>
+        <text x="316" y="44" font-size="11" fill="#57534E" font-family="Microsoft YaHei">装配批次</text>
+        <text x="316" y="61" font-size="12.5" fill="#292524" font-family="Microsoft YaHei" font-weight="500">ZP-2304-19</text>
+      </g>
+
+      <!-- 单3：试车（焦点：笔尖停这） -->
+      <g>
+        <rect x="96" y="100" width="200" height="56" rx="5" fill="#FBF3E4" stroke="#92400E" stroke-width="1.8"/>
+        <text x="112" y="122" font-size="11" fill="#92400E" font-family="Microsoft YaHei">试车记录</text>
+        <text x="112" y="142" font-size="12.5" fill="#292524" font-family="Microsoft YaHei" font-weight="600">试车员：唐守拙 · 空载声音匀</text>
+        <circle cx="120" cy="100" r="4" fill="#92400E"/>
+        <!-- 笔尖 -->
+        <path d="M310 128 L352 96 L362 106 L320 138 Z" fill="#fff" stroke="#92400E" stroke-width="1.6"/>
+        <path d="M310 128 L320 138" stroke="#92400E" stroke-width="1.6"/>
+        <text x="372" y="106" font-size="11" fill="#92400E" font-family="Microsoft YaHei">笔尖停在这行</text>
+      </g>
+      <path d="M300 128 H296" fill="none"/>
+
+      <!-- 单4：轴承 -->
+      <g>
+        <rect x="96" y="186" width="260" height="46" rx="5" fill="#FAF7F2" stroke="#A8A29E" stroke-width="1.3"/>
+        <text x="112" y="206" font-size="11" fill="#57534E" font-family="Microsoft YaHei">轴承批次</text>
+        <text x="112" y="223" font-size="12.5" fill="#292524" font-family="Microsoft YaHei" font-weight="500">HX-2303 · 变更单 GG-23-002 在档</text>
+        <circle cx="120" cy="186" r="4" fill="#78716C"/>
+      </g>
+      <!-- 单5：供应商 -->
+      <g>
+        <rect x="96" y="252" width="260" height="46" rx="5" fill="#FAF7F2" stroke="#A8A29E" stroke-width="1.3"/>
+        <text x="112" y="272" font-size="11" fill="#57534E" font-family="Microsoft YaHei">供应商</text>
+        <text x="112" y="289" font-size="12.5" fill="#292524" font-family="Microsoft YaHei" font-weight="500">华信 · 三个名字，一个户头</text>
+        <circle cx="120" cy="252" r="4" fill="#78716C"/>
+      </g>
+      <!-- 单6：去向 -->
+      <g>
+        <rect x="96" y="318" width="260" height="46" rx="5" fill="#FAF7F2" stroke="#A8A29E" stroke-width="1.3"/>
+        <text x="112" y="338" font-size="11" fill="#57534E" font-family="Microsoft YaHei">去向</text>
+        <text x="112" y="355" font-size="12.5" fill="#292524" font-family="Microsoft YaHei" font-weight="500">宏峰矿业 · 点蚀，已更换</text>
+        <circle cx="120" cy="318" r="4" fill="#78716C"/>
+      </g>
+
+      <!-- 右侧时间注 -->
+      <text x="560" y="200" font-size="12" fill="#57534E" font-family="Microsoft YaHei">链从头走到尾</text>
+      <text x="560" y="220" font-size="12" fill="#92400E" font-family="Microsoft YaHei" font-weight="600">两三分钟</text>
+      <text x="560" y="240" font-size="11" fill="#57534E" font-family="Microsoft YaHei">任抽一台都在（第20章）</text>
+    </svg>
+  </section>
+</div>

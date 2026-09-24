@@ -1,0 +1,71 @@
+<style>
+:root { --text:#292524; --text-muted:#57534E; --border:rgba(41,37,36,0.14); --brand:#92400E; --brand-soft:#FBF3E4; --radius:8px; --radius-card:12px; --s8:8px; --s16:16px; --s20:20px; --font:"Microsoft YaHei","PingFang SC",sans-serif; }
+.widget { color:var(--text); font:400 14px/20px var(--font); width:100%; }
+.card { box-sizing:border-box; width:100%; background:#fff; border:1px solid var(--border); border-radius:var(--radius-card); padding:var(--s20); }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="explanation-panel">
+  <section class="card">
+    <svg viewBox="156 12 508 302" style="width:560px;height:332.8px;display:block;margin:0 auto" role="img" aria-label="四层筛网对账漏斗">
+      <defs>
+        <marker id="f1" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto">
+          <path d="M1 1 L7 4 L1 7 Z" fill="#57534E"/>
+        </marker>
+      </defs>
+
+      <!-- 顶：流水注入 -->
+      <text x="250" y="30" font-size="12" fill="#57534E" text-anchor="middle" font-family="Noto Sans SC">六月收款流水 · 1,653 笔</text>
+      <g fill="#DDD6CE" stroke="#A8A29E" stroke-width="0.7">
+        <rect x="196" y="40" width="15" height="12" rx="2"/><rect x="217" y="40" width="15" height="12" rx="2"/><rect x="238" y="40" width="15" height="12" rx="2"/><rect x="259" y="40" width="15" height="12" rx="2"/><rect x="280" y="40" width="15" height="12" rx="2"/>
+        <rect x="207" y="56" width="15" height="12" rx="2"/><rect x="228" y="56" width="15" height="12" rx="2"/><rect x="249" y="56" width="15" height="12" rx="2"/><rect x="270" y="56" width="15" height="12" rx="2"/>
+      </g>
+      <path d="M210 72 V 86" fill="none" stroke="#78716C" stroke-width="1.4" marker-end="url(#f1)"/>
+      <path d="M290 72 V 86" fill="none" stroke="#78716C" stroke-width="1.4" marker-end="url(#f1)"/>
+
+      <!-- 第一层筛网：自动配平 -->
+      <g>
+        <path d="M170 90 L 330 90 L 300 118 L 200 118 Z" fill="#F3EEE5" stroke="#78716C" stroke-width="1.4"/>
+        <text x="250" y="110" font-size="11" fill="#292524" text-anchor="middle" font-family="Noto Sans SC">自动配平 · 留 1,021 笔</text>
+      </g>
+      <!-- 拦下的红块 632 -->
+      <path d="M336 100 H 372" fill="none" stroke="#C0392B" stroke-width="1.3" marker-end="url(#f1)"/>
+      <g fill="#FDE8E4" stroke="#C0392B" stroke-width="1">
+        <rect x="378" y="88" width="15" height="12" rx="2"/><rect x="397" y="88" width="15" height="12" rx="2"/><rect x="378" y="104" width="15" height="12" rx="2"/>
+      </g>
+      <text x="424" y="106" font-size="11" fill="#C0392B" font-family="Noto Sans SC">差异 632 笔 · 486.2 万</text>
+      <text x="424" y="121" font-size="10" fill="#57534E" font-family="Noto Sans SC">527 笔冤枉人：代付、组合、折让</text>
+
+      <path d="M250 122 V 136" fill="none" stroke="#78716C" stroke-width="1.4" marker-end="url(#f1)"/>
+
+      <!-- 第二层筛网：规则 V2 -->
+      <g>
+        <path d="M182 140 L 318 140 L 292 168 L 208 168 Z" fill="#F3EEE5" stroke="#78716C" stroke-width="1.4"/>
+        <text x="250" y="160" font-size="11" fill="#292524" text-anchor="middle" font-family="Noto Sans SC">规则表 V1 → V2</text>
+      </g>
+      <path d="M322 150 H 372" fill="none" stroke="#C0392B" stroke-width="1.3" marker-end="url(#f1)"/>
+      <g fill="#FDE8E4" stroke="#C0392B" stroke-width="1">
+        <rect x="378" y="144" width="15" height="12" rx="2"/>
+      </g>
+      <text x="424" y="156" font-size="11" fill="#C0392B" font-family="Noto Sans SC">差异 58 笔 · 7.9 万，笔笔有事</text>
+
+      <path d="M250 172 V 186" fill="none" stroke="#78716C" stroke-width="1.4" marker-end="url(#f1)"/>
+
+      <!-- 底：清的 -->
+      <rect x="196" y="190" width="108" height="40" rx="6" fill="#FBF3E4" stroke="#92400E" stroke-width="1.5"/>
+      <text x="250" y="215" font-size="12" fill="#92400E" text-anchor="middle" font-family="Noto Sans SC">流出：平的</text>
+
+      <!-- 回捞篮（虚线）：三年老账 -->
+      <path d="M304 210 C 360 210, 380 220, 396 232" fill="none" stroke="#92400E" stroke-width="1.3" stroke-dasharray="5 4"/>
+      <g>
+        <path d="M400 234 H 500 L 486 268 H 414 Z" fill="none" stroke="#92400E" stroke-width="1.4" stroke-dasharray="5 4"/>
+        <g fill="#FDE8E4" stroke="#C0392B" stroke-width="0.9">
+          <rect x="424" y="244" width="13" height="11" rx="2"/><rect x="441" y="244" width="13" height="11" rx="2"/><rect x="458" y="244" width="13" height="11" rx="2"/><rect x="424" y="257" width="13" height="11" rx="2"/>
+        </g>
+        <text x="516" y="248" font-size="11" fill="#92400E" font-family="Noto Sans SC">回捞篮 · 三年"待查"老账</text>
+        <text x="516" y="264" font-size="11" fill="#C0392B" font-family="Noto Sans SC">252 笔 · 17.2 万，全有了名目</text>
+      </g>
+
+      <!-- 底注 -->
+      <text x="250" y="300" font-size="10.5" fill="#57534E" text-anchor="middle" font-family="Noto Sans SC">规则吃掉的，不算消灭——规则一改，它们会回来（第8章·小夏）</text>
+    </svg>
+  </section>
+</div>

@@ -1,0 +1,38 @@
+<style>
+:root { --text:#292524; --text-muted:#78716C; --border:rgba(41,37,36,0.14); --brand:#92400E; --brand-soft:#FBF3E4; --radius:8px; --radius-card:12px; --radius-full:999px; --s4:4px; --s8:8px; --s12:12px; --s16:16px; --s20:20px; --font:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif; }
+.widget { color:var(--text); font:400 14px/20px var(--font); width:100%; }
+.card { box-sizing:border-box; width:100%; background:#fff; border:1px solid var(--border); border-radius:var(--radius-card); padding:var(--s20); }
+.entry { display:grid; grid-template-columns:repeat(4,1fr); gap:var(--s8); }
+.cell { border:1px solid var(--border); border-radius:var(--radius); background:var(--surface); padding:var(--s12); }
+.cell i { display:block; font:400 11px/16px var(--font); color:var(--text-muted); font-style:normal; }
+.cell b { display:block; margin-top:var(--s4); font:500 13px/18px var(--font); color:var(--text); }
+.waveWrap { margin-top:var(--s16); border:1.5px solid var(--brand); border-radius:var(--radius); background:var(--brand-soft); padding:var(--s12) var(--s16) var(--s8); }
+.waveTag { display:flex; justify-content:space-between; align-items:baseline; }
+.waveTag b { font:500 12px/18px var(--font); color:var(--brand); }
+.waveTag span { font:400 11px/16px var(--font); color:var(--text-muted); }
+.wave { width:100%; height:44px; display:block; }
+.foot { margin-top:var(--s12); display:flex; flex-wrap:wrap; gap:var(--s8); }
+.fp { padding:var(--s4) var(--s12); border:1px solid var(--border); border-radius:var(--radius-full); font:400 12px/18px var(--font); color:var(--text-muted); background:var(--surface); }
+.fp b { color:var(--brand); font-weight:600; }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="architecture-elements">
+  <section class="card">
+    <div class="entry">
+      <div class="cell"><i>症状</i><b>空载闷响，一声过去又回来</b></div>
+      <div class="cell"><i>部位</i><b>输出轴轴承</b></div>
+      <div class="cell"><i>原因</i><b>游隙、预紧偏离手感</b></div>
+      <div class="cell"><i>方案</i><b>复测两遍，存疑记两班</b></div>
+    </div>
+    <div class="waveWrap">
+      <div class="waveTag"><b>原声 · 8 分 42 秒</b><span>2026 年 6 月录，第一回</span></div>
+      <svg class="wave" viewBox="0 0 640 44" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,22 C20,10 30,34 50,22 S80,8 100,22 S130,36 150,22 S180,12 200,22 S230,34 250,22 S280,10 300,22 S330,32 350,22 S380,14 400,22 S430,30 450,22 S480,16 500,22 S530,28 550,22 S580,18 600,22 L640,22" fill="none" stroke="#92400E" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="foot">
+      <span class="fp"><b>129 条</b>条目</span>
+      <span class="fp"><b>44 回</b>原声挂在条目底下</span>
+      <span class="fp">那个劲儿，字里搁不下——搁声儿里（第21章）</span>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,51 @@
+<style>
+:root { --text:#292524; --text-muted:#57534E; --border:rgba(41,37,36,0.14); --brand:#92400E; --brand-soft:#FBF3E4; --radius:8px; --radius-card:12px; --s8:8px; --s16:16px; --s20:20px; --font:"Microsoft YaHei","PingFang SC",sans-serif; }
+.widget { color:var(--text); font:400 14px/20px var(--font); width:100%; }
+.card { box-sizing:border-box; width:100%; background:#fff; border:1px solid var(--border); border-radius:var(--radius-card); padding:var(--s16); }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="node-flow">
+  <section class="card">
+    <svg viewBox="0 0 680 280" style="width:684px;height:280px;display:block" role="img" aria-label="一年，六个词的山路">
+      <!-- 山路：从左下到右上 -->
+      <path d="M50 240 C 130 230, 160 200, 210 192 S 300 178, 350 148 S 440 118, 490 92 S 590 62, 636 48" fill="none" stroke="#D6CFC5" stroke-width="2.5"/>
+      <!-- 六站 -->
+      <g font-family="Microsoft YaHei">
+        <g>
+          <circle cx="50" cy="240" r="7" fill="#fff" stroke="#78716C" stroke-width="2"/>
+          <text x="50" y="270" font-size="13" fill="#292524" text-anchor="middle" font-weight="500">什么算数</text>
+          <text x="50" y="222" font-size="10.5" fill="#57534E" text-anchor="middle">第一幕</text>
+        </g>
+        <g>
+          <circle cx="210" cy="192" r="7" fill="#fff" stroke="#78716C" stroke-width="2"/>
+          <text x="210" y="222" font-size="13" fill="#292524" text-anchor="middle" font-weight="500">口径</text>
+          <text x="210" y="174" font-size="10.5" fill="#57534E" text-anchor="middle">第二幕</text>
+        </g>
+        <g>
+          <circle cx="350" cy="148" r="7" fill="#fff" stroke="#78716C" stroke-width="2"/>
+          <text x="350" y="128" font-size="13" fill="#292524" text-anchor="middle" font-weight="500">图思维</text>
+          <text x="350" y="176" font-size="10.5" fill="#57534E" text-anchor="middle">第二幕</text>
+        </g>
+        <g>
+          <circle cx="490" cy="92" r="7" fill="#fff" stroke="#78716C" stroke-width="2"/>
+          <text x="490" y="72" font-size="13" fill="#292524" text-anchor="middle" font-weight="500">正本</text>
+          <text x="490" y="120" font-size="10.5" fill="#57534E" text-anchor="middle">第四幕</text>
+        </g>
+        <g>
+          <circle cx="636" cy="48" r="9" fill="#92400E"/>
+          <text x="636" y="28" font-size="13" fill="#92400E" text-anchor="middle" font-weight="600">知识图谱</text>
+          <text x="600" y="70" font-size="10.5" fill="#57534E" text-anchor="middle">第五幕</text>
+        </g>
+      </g>
+      <!-- 中途站牌：总目（本体）——放在山路中段偏上 -->
+      <g font-family="Microsoft YaHei">
+        <rect x="470" y="150" width="96" height="26" rx="4" fill="#FBF3E4" stroke="#92400E" stroke-width="1.2"/>
+        <text x="518" y="168" font-size="12" fill="#92400E" text-anchor="middle">总目 · 本体</text>
+        <line x1="500" y1="150" x2="505" y2="100" stroke="#92400E" stroke-width="1.1"/>
+        <text x="560" y="160" font-size="10.5" fill="#57534E">第五幕</text>
+      </g>
+      <!-- 起点标 -->
+      <text x="50" y="200" font-size="10.5" fill="#57534E" text-anchor="middle">2026.3</text>
+      <text x="636" y="106" font-size="10.5" fill="#57534E" text-anchor="middle">2027.5</text>
+    </svg>
+  </section>
+</div>

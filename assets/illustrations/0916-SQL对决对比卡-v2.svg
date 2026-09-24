@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 330" font-family="PingFang SC, Microsoft YaHei, sans-serif">
+  <!-- 左卡：SQL -->
+  <rect x="40" y="40" width="308" height="246" rx="12" fill="#F7F7F8" stroke="rgba(23,23,23,0.12)" stroke-width="1"/>
+  <text x="64" y="76" font-size="16" font-weight="600" fill="#171717">SQL</text>
+  <text x="64" y="100" font-size="12" fill="#52525B">写了一下午的查询</text>
+  <g font-size="12" fill="#A1A1AA">
+    <text x="64" y="136">写</text>
+    <text x="64" y="180">改</text>
+    <text x="64" y="224">跑</text>
+    <text x="64" y="268">漏</text>
+  </g>
+  <g font-size="14" fill="#171717">
+    <text x="104" y="136">116 行，五层嵌套</text>
+    <text x="104" y="180">两回，到夜里两点</text>
+    <text x="104" y="224">2 分 17 秒，50 行</text>
+    <text x="104" y="268">走代理的 3 台</text>
+  </g>
+
+  <!-- 右卡：图 -->
+  <rect x="372" y="40" width="308" height="246" rx="12" fill="#F7F7F8" stroke="rgba(23,23,23,0.12)" stroke-width="1"/>
+  <text x="396" y="76" font-size="16" font-weight="600" fill="#171717">图</text>
+  <text x="396" y="100" font-size="12" fill="#52525B">现场写的查询</text>
+  <g font-size="12" fill="#A1A1AA">
+    <text x="396" y="136">写</text>
+    <text x="396" y="180">改</text>
+    <text x="396" y="224">跑</text>
+    <text x="396" y="268">全</text>
+  </g>
+  <g font-size="14" fill="#171717">
+    <text x="436" y="136"><tspan font-weight="600" fill="#92400E" font-size="16">1 行</tspan></text>
+    <text x="436" y="180">40 秒</text>
+    <text x="436" y="224">不到 1 秒，53 行</text>
+    <text x="436" y="268">矿上 3 台都在</text>
+  </g>
+
+  <!-- 底部对齐说明：同一道题 -->
+  <text x="360" y="316" font-size="12" fill="#A1A1AA" text-anchor="middle">同一道题：2023 年 3 月后，那几个批次还装进了哪些机器，发给了谁</text>
+</svg>

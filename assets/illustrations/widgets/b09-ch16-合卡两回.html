@@ -1,0 +1,24 @@
+<style>
+:root { --text:#292524; --text-muted:#78716C; --border:rgba(41,37,36,0.14); --brand:#92400E; --brand-soft:#FBF3E4; --radius:8px; --radius-card:12px; --radius-full:999px; --s4:4px; --s8:8px; --s12:12px; --s16:16px; --s20:20px; --font:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif; }
+.widget { color:var(--text); font:400 14px/20px var(--font); width:100%; }
+.card { box-sizing:border-box; width:100%; background:#fff; border:1px solid var(--border); border-radius:var(--radius-card); padding:var(--s20); }
+.tl { position:relative; margin-left:var(--s8); padding-left:var(--s20); border-left:2px solid var(--border); display:grid; gap:var(--s16); }
+.ev { position:relative; }
+.ev::before { content:""; position:absolute; left:calc(-1 * var(--s20) - 6px); top:6px; width:10px; height:10px; border-radius:var(--radius-full); background:#fff; border:2px solid var(--text-muted); }
+.ev[data-now="1"]::before { border-color:var(--brand); background:var(--brand); }
+.yr { font:500 12px/18px var(--font); color:var(--text-muted); }
+.ev[data-now="1"] .yr { color:var(--brand); }
+.ttl { font:500 14px/20px var(--font); color:var(--text); margin-top:var(--s4); }
+.pts { margin-top:var(--s4); display:flex; flex-wrap:wrap; gap:var(--s8); }
+.pt { padding:var(--s4) var(--s12); border:1px solid var(--border); border-radius:var(--radius-full); background:var(--surface); font:400 12px/18px var(--font); color:var(--text-muted); }
+.ev[data-now="1"] .pt { border-color:var(--brand); background:var(--brand-soft); color:var(--brand-text); }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="architecture-elements">
+  <section class="card">
+    <div class="tl">
+      <div class="ev"><div class="yr">1985 年 · 设计院合卡，黄了</div><div class="ttl">十一柜资料一起合</div><div class="pts"><span class="pt">没人拍板</span><span class="pt">坐在屋里编</span><span class="pt">一口想吃全</span></div></div>
+      <div class="ev"><div class="yr">1986 年 · 第二回，成了</div><div class="ttl">先合传动一门</div><div class="pts"><span class="pt">贺所长坐镇</span><span class="pt">吵出结果当场落字</span><span class="pt">词，是吵着定的</span></div></div>
+      <div class="ev" data-now="1"><div class="yr">2027 年 · 青山传动</div><div class="ttl">同样的路，得了学名</div><div class="pts"><span class="pt">总目的学名：本体</span><span class="pt">连成图的卡和账：知识图谱</span><span class="pt">东西还是那个东西，名目换了（第16章）</span></div></div>
+    </div>
+  </section>
+</div>

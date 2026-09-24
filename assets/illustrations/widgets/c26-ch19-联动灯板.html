@@ -1,0 +1,47 @@
+<style>
+:root { --text:#292524; --text-muted:#57534E; --border:rgba(41,37,36,0.14); --brand:#92400E; --brand-soft:#FBF3E4; --radius:8px; --radius-card:12px; --radius-full:999px; --s16:16px; --font:"Microsoft YaHei","PingFang SC",sans-serif; }
+.widget { color:var(--text); font:400 14px/20px var(--font); width:100%; }
+.card { box-sizing:border-box; width:100%; background:#fff; border:1px solid var(--border); border-radius:var(--radius-card); padding:var(--s16); }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="explanation-panel">
+  <section class="card">
+    <svg viewBox="0 0 680 270" style="width:684px;height:270px;display:block" role="img" aria-label="改一个词，六格依次亮灯签收">
+      <!-- 左源：改词通知单 -->
+      <g>
+        <rect x="28" y="96" width="130" height="70" rx="6" fill="#FBF3E4" stroke="#92400E" stroke-width="1.6"/>
+        <text x="93" y="124" font-size="12.5" fill="#92400E" text-anchor="middle" font-family="Microsoft YaHei" font-weight="600">改词通知单</text>
+        <text x="93" y="146" font-size="10.5" fill="#57534E" text-anchor="middle" font-family="Microsoft YaHei">六栏 · 逐格签收</text>
+      </g>
+      <!-- 六格灯板 -->
+      <g font-family="Microsoft YaHei" font-size="12" text-anchor="middle">
+        <g><rect x="216" y="36" width="128" height="52" rx="6" fill="#FBF3E4" stroke="#92400E" stroke-width="1.5"/><circle cx="232" cy="52" r="4" fill="#92400E"/><text x="284" y="60" fill="#292524" font-weight="500">总目词卡</text><text x="280" y="78" font-size="10" fill="#57534E">改页重印</text></g>
+        <g><rect x="384" y="36" width="128" height="52" rx="6" fill="#FBF3E4" stroke="#92400E" stroke-width="1.5"/><circle cx="400" cy="52" r="4" fill="#92400E"/><text x="452" y="60" fill="#292524" font-weight="500">图谱节点</text><text x="448" y="78" font-size="10" fill="#57534E">边跟着换</text></g>
+        <g><rect x="216" y="110" width="128" height="52" rx="6" fill="#FBF3E4" stroke="#92400E" stroke-width="1.5"/><circle cx="232" cy="126" r="4" fill="#92400E"/><text x="284" y="134" fill="#292524" font-weight="500">ERP 主档</text><text x="280" y="152" font-size="10" fill="#57534E">供应商名</text></g>
+        <g><rect x="384" y="110" width="128" height="52" rx="6" fill="#FBF3E4" stroke="#92400E" stroke-width="1.5"/><circle cx="400" cy="126" r="4" fill="#92400E"/><text x="452" y="134" fill="#292524" font-weight="500">QMS 台账</text><text x="448" y="152" font-size="10" fill="#57534E">检验记录</text></g>
+        <g><rect x="216" y="184" width="128" height="52" rx="6" fill="#FBF3E4" stroke="#92400E" stroke-width="1.5"/><circle cx="232" cy="200" r="4" fill="#92400E"/><text x="284" y="208" fill="#292524" font-weight="500">财务验票</text><text x="280" y="226" font-size="10" fill="#57534E">开票名头</text></g>
+        <g><rect x="384" y="184" width="128" height="52" rx="6" fill="#FBF3E4" stroke="#92400E" stroke-width="1.5"/><circle cx="400" cy="200" r="4" fill="#92400E"/><text x="452" y="208" fill="#292524" font-weight="500">采购合同</text><text x="448" y="226" font-size="10" fill="#57534E">重签四张</text></g>
+      </g>
+      <!-- 从源到六格的灯线 -->
+      <g stroke="#92400E" stroke-width="1.2" fill="none">
+        <path d="M158 112 C 190 100, 196 76, 212 64"/>
+        <path d="M158 118 C 210 112, 320 96, 380 68"/>
+        <path d="M158 130 C 200 136, 196 136, 212 136"/>
+        <path d="M158 140 C 230 152, 320 138, 380 138"/>
+        <path d="M158 150 C 210 168, 190 200, 212 210"/>
+        <path d="M158 156 C 260 190, 320 208, 380 210"/>
+      </g>
+      <!-- 右：金岭回路 -->
+      <g>
+        <rect x="548" y="96" width="106" height="120" rx="6" fill="#fff" stroke="#A8A29E" stroke-width="1.3"/>
+        <text x="601" y="120" font-size="11.5" fill="#292524" text-anchor="middle" font-family="Microsoft YaHei" font-weight="500">金岭错词</text>
+        <text x="601" y="142" font-size="10" fill="#57534E" text-anchor="middle" font-family="Microsoft YaHei">4/23 发现</text>
+        <text x="601" y="160" font-size="10" fill="#57534E" text-anchor="middle" font-family="Microsoft YaHei">凭据核码</text>
+        <text x="601" y="178" font-size="10" fill="#57534E" text-anchor="middle" font-family="Microsoft YaHei">4/30 收回</text>
+        <text x="601" y="200" font-size="10" fill="#92400E" text-anchor="middle" font-family="Microsoft YaHei">追回四张合同</text>
+      </g>
+      <path d="M516 140 H 544" fill="none" stroke="#C0392B" stroke-width="1.3" stroke-dasharray="4 3"/>
+      <!-- 底注 -->
+      <text x="340" y="258" font-size="11.5" fill="#57534E" text-anchor="middle" font-family="Microsoft YaHei">错一处、六本账跟着动 —— 每格亮灯，谁签收记谁（第19章）</text>
+    </svg>
+  </section>
+</div>

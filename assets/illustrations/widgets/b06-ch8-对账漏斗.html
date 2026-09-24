@@ -1,0 +1,31 @@
+<style>
+:root { --text:#292524; --text-muted:#78716C; --border:rgba(41,37,36,0.14); --brand:#92400E; --brand-soft:#FBF3E4; --radius:8px; --radius-card:12px; --radius-full:999px; --s4:4px; --s8:8px; --s12:12px; --s16:16px; --s20:20px; --font:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif; }
+.widget { color:var(--text); font:400 14px/20px var(--font); width:100%; }
+.card { box-sizing:border-box; width:100%; background:#fff; border:1px solid var(--border); border-radius:var(--radius-card); padding:var(--s20); }
+.funnel { display:grid; gap:var(--s8); }
+.stage { border:1px solid var(--border); border-radius:var(--radius); background:var(--surface); padding:var(--s12) var(--s16); }
+.stage .l1 { display:flex; align-items:baseline; gap:var(--s8); flex-wrap:wrap; }
+.stage .l1 b { font:500 14px/20px var(--font); color:var(--text); }
+.stage .l1 .big { font:600 16px/24px var(--font); color:var(--brand); }
+.stage .l1 span { font:400 12px/18px var(--font); color:var(--text-muted); }
+.stage .l2 { margin-top:var(--s4); font:400 12px/18px var(--font); color:var(--text-muted); }
+.stage[data-step="1"] { width:100%; }
+.stage[data-step="2"] { width:82%; }
+.stage[data-step="3"] { width:64%; }
+.stage[data-step="4"] { width:50%; border:1.5px solid var(--brand); background:var(--brand-soft); }
+.stage[data-step="4"] .l1 .big, .stage[data-step="4"] .l1 b { color:var(--brand); }
+.arrow { color:var(--text-muted); font:400 12px/16px var(--font); padding-left:var(--s16); }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="funnel-bar-chart">
+  <section class="card">
+    <div class="funnel">
+      <div class="stage" data-step="1"><div class="l1"><b>六月收款流水</b><span class="big">1,653 笔</span></div><div class="l2">银行对账试点，第一轮机器全跑</div></div>
+      <div class="arrow">▼ 自动配平 1,021 笔</div>
+      <div class="stage" data-step="2"><div class="l1"><b>第一轮差异</b><span class="big">632 笔</span><span>合计 486.2 万</span></div><div class="l2">527 笔是机器冤枉人——代付、组合、折让，规则没教过</div></div>
+      <div class="arrow">▼ 规则表挂墙，V1 改 V2</div>
+      <div class="stage" data-step="3"><div class="l1"><b>第二轮差异</b><span class="big">58 笔</span><span>合计 7.9 万</span></div><div class="l2">老康过完一遍："这回，笔笔有事"</div></div>
+      <div class="arrow">▼ 规则吃掉的不算消灭——回溯三年全量</div>
+      <div class="stage" data-step="4"><div class="l1"><b>三年"待查"老账</b><span class="big">252 笔</span><span>合计 17.2 万</span></div><div class="l2">尾差 214 笔 7.4 万 + 客户多付 38 笔 9.8 万，全部有了名目（第8章）</div></div>
+    </div>
+  </section>
+</div>

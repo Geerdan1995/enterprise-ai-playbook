@@ -1,0 +1,127 @@
+<style>
+:root { --text:#292524; --text-muted:#57534E; --border:rgba(41,37,36,0.14); --brand:#92400E; --brand-soft:#FBF3E4; --surface:#FAF7F2; --radius:8px; --radius-card:12px; --radius-full:999px; --s4:4px; --s8:8px; --s12:12px; --s16:16px; --s20:20px; --font:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif; }
+.widget { color:var(--text); font:400 14px/20px var(--font); width:100%; }
+.card { box-sizing:border-box; width:100%; background:#fff; border:1px solid var(--border); border-radius:var(--radius-card); padding:var(--s20); }
+.title { margin:0 0 var(--s16); font:500 15px/22px var(--font); color:var(--text); }
+.panels { display:grid; grid-template-columns:1fr 1fr 1fr; gap:var(--s12); }
+.panel { border:1px solid var(--border); border-radius:var(--radius); background:var(--surface); padding:var(--s12); }
+.pHead { display:flex; align-items:center; gap:var(--s8); margin-bottom:var(--s8); }
+.pNo { width:20px; height:20px; border-radius:var(--radius-full); background:#fff; border:1px solid var(--border); color:var(--text); font:500 12px/18px var(--font); display:inline-flex; align-items:center; justify-content:center; }
+.pName { font:500 13px/18px var(--font); color:var(--text); }
+.pSvg { width:100%; height:auto; display:block; }
+.pNote { margin-top:var(--s8); font:400 11.5px/17px var(--font); color:var(--text-muted); }
+.pNote em { font-style:normal; color:var(--brand); font-weight:500; }
+.foot { margin-top:var(--s16); border-top:1px solid var(--border); padding-top:var(--s12); font:400 12.5px/19px var(--font); color:var(--text-muted); }
+.foot b { color:var(--brand); font-weight:500; }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="explanation-panel">
+  <section class="card">
+    <h3 class="title">三次试验，断点各在哪</h3>
+    <div class="panels">
+
+      <div class="panel">
+        <div class="pHead"><span class="pNo">1</span><span class="pName">智知云试点</span></div>
+        <svg class="pSvg" viewBox="0 0 200 150" aria-hidden="true">
+          <defs>
+            <marker id="a1" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto">
+              <path d="M1 1 L7 4 L1 7 Z" fill="#57534E"/>
+            </marker>
+          </defs>
+          <!-- 文档堆 -->
+          <rect x="8" y="52" width="34" height="42" rx="3" fill="#EFEAE3" stroke="#A8A29E" stroke-width="1"/>
+          <rect x="13" y="47" width="34" height="42" rx="3" fill="#F3EEE5" stroke="#A8A29E" stroke-width="1"/>
+          <rect x="18" y="42" width="34" height="42" rx="3" fill="#FAF7F2" stroke="#78716C" stroke-width="1.2"/>
+          <text x="35" y="104" font-size="10" fill="#57534E" text-anchor="middle" font-family="Noto Sans SC">文档</text>
+          <!-- 流入箭头 -->
+          <path d="M58 63 H84" fill="none" stroke="#78716C" stroke-width="1.4" marker-end="url(#a1)"/>
+          <!-- 演示环境 -->
+          <rect x="88" y="42" width="52" height="42" rx="6" fill="#fff" stroke="#92400E" stroke-width="1.4"/>
+          <text x="114" y="60" font-size="10" fill="#292524" text-anchor="middle" font-family="Noto Sans SC">演示</text>
+          <text x="114" y="74" font-size="10" fill="#292524" text-anchor="middle" font-family="Noto Sans SC">环境</text>
+          <!-- 输出箭头 -->
+          <path d="M144 63 H168" fill="none" stroke="#78716C" stroke-width="1.4" marker-end="url(#a1)"/>
+          <!-- 输出：四个批次号 -->
+          <rect x="172" y="30" width="20" height="14" rx="2" fill="#DDD6CE" stroke="#A8A29E" stroke-width="0.8"/>
+          <rect x="172" y="48" width="20" height="14" rx="2" fill="#DDD6CE" stroke="#A8A29E" stroke-width="0.8"/>
+          <rect x="172" y="66" width="20" height="14" rx="2" fill="#DDD6CE" stroke="#A8A29E" stroke-width="0.8"/>
+          <rect x="172" y="84" width="20" height="14" rx="2" fill="#FDE8E4" stroke="#C0392B" stroke-width="1.4" stroke-dasharray="3 2"/>
+          <text x="182" y="95" font-size="8" fill="#C0392B" text-anchor="middle" font-weight="600" font-family="Noto Sans SC">编</text>
+          <text x="170" y="118" font-size="9.5" fill="#C0392B" text-anchor="middle" font-family="Noto Sans SC">ERP 里没有</text>
+          <text x="114" y="118" font-size="9.5" fill="#57534E" text-anchor="middle" font-family="Noto Sans SC">格式漂亮</text>
+        </svg>
+        <div class="pNote">四个批次号，三个对得上，一个<em>是编的</em></div>
+      </div>
+
+      <div class="panel">
+        <div class="pHead"><span class="pNo">2</span><span class="pName">SQL 倒查</span></div>
+        <svg class="pSvg" viewBox="0 0 200 150" aria-hidden="true">
+          <defs>
+            <marker id="a2" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto">
+              <path d="M1 1 L7 4 L1 7 Z" fill="#57534E"/>
+            </marker>
+          </defs>
+          <!-- 问法输入 -->
+          <text x="30" y="40" font-size="10" fill="#57534E" text-anchor="middle" font-family="Noto Sans SC">问法</text>
+          <rect x="14" y="50" width="32" height="12" rx="2" fill="#DDD6CE" stroke="#A8A29E" stroke-width="0.8"/>
+          <text x="30" y="59" font-size="8" fill="#57534E" text-anchor="middle" font-family="Consolas">v1</text>
+          <rect x="14" y="68" width="32" height="12" rx="2" fill="#DDD6CE" stroke="#A8A29E" stroke-width="0.8"/>
+          <text x="30" y="77" font-size="8" fill="#57534E" text-anchor="middle" font-family="Consolas">v2</text>
+          <rect x="14" y="86" width="32" height="12" rx="2" fill="#DDD6CE" stroke="#A8A29E" stroke-width="0.8"/>
+          <text x="30" y="95" font-size="8" fill="#57534E" text-anchor="middle" font-family="Consolas">v3</text>
+          <!-- 新问法 -->
+          <text x="30" y="122" font-size="10" fill="#92400E" text-anchor="middle" font-family="Noto Sans SC" font-weight="600">又变了</text>
+          <path d="M52 118 H86" fill="none" stroke="#92400E" stroke-width="1.4" stroke-dasharray="4 3"/>
+          <!-- 查询纸摞：重写三遍 -->
+          <rect x="90" y="56" width="44" height="52" rx="3" fill="#EFEAE3" stroke="#A8A29E" stroke-width="1"/>
+          <rect x="95" y="51" width="44" height="52" rx="3" fill="#F3EEE5" stroke="#A8A29E" stroke-width="1"/>
+          <rect x="100" y="46" width="44" height="52" rx="3" fill="#FAF7F2" stroke="#78716C" stroke-width="1.2"/>
+          <text x="122" y="76" font-size="10" fill="#57534E" text-anchor="middle" font-family="Noto Sans SC">116 行</text>
+          <text x="122" y="120" font-size="9.5" fill="#57534E" text-anchor="middle" font-family="Noto Sans SC">重写了三遍</text>
+          <!-- 断裂的输出 -->
+          <path d="M150 72 H164" fill="none" stroke="#78716C" stroke-width="1.4"/>
+          <path d="M172 66 L182 78 M176 64 L168 80" stroke="#C0392B" stroke-width="1.6" stroke-linecap="round"/>
+          <text x="177" y="98" font-size="9.5" fill="#C0392B" text-anchor="middle" font-family="Noto Sans SC">换个问法</text>
+          <text x="177" y="110" font-size="9.5" fill="#C0392B" text-anchor="middle" font-family="Noto Sans SC">就重写</text>
+        </svg>
+        <div class="pNote">问法一变就重写，<em>新问法接不上</em></div>
+      </div>
+
+      <div class="panel">
+        <div class="pHead"><span class="pNo">3</span><span class="pName">检索试验</span></div>
+        <svg class="pSvg" viewBox="0 0 200 150" aria-hidden="true">
+          <defs>
+            <marker id="a3" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto">
+              <path d="M1 1 L7 4 L1 7 Z" fill="#57534E"/>
+            </marker>
+          </defs>
+          <!-- 库里五条 -->
+          <text x="30" y="34" font-size="10" fill="#57534E" text-anchor="middle" font-family="Noto Sans SC">库里 5 条</text>
+          <rect x="12" y="44" width="16" height="16" rx="2" fill="#DDD6CE" stroke="#A8A29E" stroke-width="0.8"/>
+          <rect x="32" y="44" width="16" height="16" rx="2" fill="#DDD6CE" stroke="#A8A29E" stroke-width="0.8"/>
+          <rect x="12" y="64" width="16" height="16" rx="2" fill="#DDD6CE" stroke="#A8A29E" stroke-width="0.8"/>
+          <rect x="32" y="64" width="16" height="16" rx="2" fill="#DDD6CE" stroke="#A8A29E" stroke-width="0.8"/>
+          <rect x="12" y="84" width="16" height="16" rx="2" fill="#DDD6CE" stroke="#A8A29E" stroke-width="0.8"/>
+          <rect x="32" y="84" width="16" height="16" rx="2" fill="#DDD6CE" stroke="#A8A29E" stroke-width="0.8"/>
+          <!-- 机器 -->
+          <path d="M72 66 H98" fill="none" stroke="#78716C" stroke-width="1.4" marker-end="url(#a3)"/>
+          <rect x="102" y="48" width="46" height="42" rx="6" fill="#fff" stroke="#78716C" stroke-width="1.2"/>
+          <text x="125" y="66" font-size="10" fill="#292524" text-anchor="middle" font-family="Noto Sans SC">检索</text>
+          <text x="125" y="80" font-size="10" fill="#292524" text-anchor="middle" font-family="Noto Sans SC">作答</text>
+          <path d="M152 66 H172" fill="none" stroke="#78716C" stroke-width="1.4" marker-end="url(#a3)"/>
+          <!-- 要答六条：5实1虚 -->
+          <text x="185" y="34" font-size="10" fill="#57534E" text-anchor="middle" font-family="Noto Sans SC">答 6 条</text>
+          <rect x="168" y="40" width="15" height="15" rx="2" fill="#DDD6CE" stroke="#A8A29E" stroke-width="0.8"/>
+          <rect x="186" y="40" width="15" height="15" rx="2" fill="#DDD6CE" stroke="#A8A29E" stroke-width="0.8"/>
+          <rect x="168" y="59" width="15" height="15" rx="2" fill="#DDD6CE" stroke="#A8A29E" stroke-width="0.8"/>
+          <rect x="186" y="59" width="15" height="15" rx="2" fill="#DDD6CE" stroke="#A8A29E" stroke-width="0.8"/>
+          <rect x="168" y="78" width="15" height="15" rx="2" fill="#DDD6CE" stroke="#A8A29E" stroke-width="0.8"/>
+          <rect x="186" y="78" width="15" height="15" rx="2" fill="#FDE8E4" stroke="#C0392B" stroke-width="1.4" stroke-dasharray="3 2"/>
+          <text x="193" y="89" font-size="8" fill="#C0392B" text-anchor="middle" font-weight="600" font-family="Noto Sans SC">编</text>
+          <text x="125" y="118" font-size="9.5" fill="#57534E" text-anchor="middle" font-family="Noto Sans SC">库里只有五条，它答了六条</text>
+        </svg>
+        <div class="pNote">第六条是<em>编的</em></div>
+      </div>
+
+    </div>
+  </section>
+</div>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 400" font-family="KaiTi, STKaiti, 楷体, serif">
+  <!-- 纯白底（小黑风格红线：白底大量留白） -->
+  <rect x="0" y="0" width="680" height="400" fill="#FFFFFF" stroke="#E7E5E4" stroke-width="1"/>
+
+  <!-- 白板：手绘感微歪矩形 -->
+  <path d="M72,44 L509,41 L512,306 L74,309 Z" fill="#FFFFFF" stroke="#1C1917" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- 托板与笔 -->
+  <line x1="90" y1="312" x2="490" y2="312" stroke="#1C1917" stroke-width="3" stroke-linecap="round"/>
+  <rect x="380" y="315" width="30" height="6" rx="3" fill="#EF4444"/>
+  <rect x="420" y="315" width="30" height="6" rx="3" fill="#1C1917"/>
+
+  <!-- 白板上的孤词：散布，词与词之间绝无连线 -->
+  <g fill="#292524" font-size="19">
+    <text x="118" y="102">宏峰矿业</text>
+    <text x="328" y="96">JS-1100</text>
+    <text x="440" y="112">2023·3</text>
+    <text x="150" y="172">华信轴承</text>
+    <text x="396" y="162">热处理</text>
+    <text x="196" y="214">作废文件</text>
+    <text x="128" y="258">老唐</text>
+    <text x="266" y="248">晋北煤业</text>
+    <text x="426" y="238">387</text>
+    <text x="336" y="288">462</text>
+  </g>
+
+  <!-- 小黑：黑色实心、白点眼、细腿；攥着红线，线头悬着不敢落 -->
+  <g>
+    <ellipse cx="592" cy="298" rx="23" ry="29" fill="#1C1917"/>
+    <circle cx="585" cy="290" r="2.4" fill="#FFFFFF"/>
+    <circle cx="599" cy="290" r="2.4" fill="#FFFFFF"/>
+    <path d="M585,326 L581,360" stroke="#1C1917" stroke-width="3" stroke-linecap="round"/>
+    <path d="M599,326 L604,360" stroke="#1C1917" stroke-width="3" stroke-linecap="round"/>
+    <path d="M571,303 L556,328" stroke="#1C1917" stroke-width="3" stroke-linecap="round"/>
+    <path d="M613,294 L634,272" stroke="#1C1917" stroke-width="3" stroke-linecap="round"/>
+    <!-- 线团 -->
+    <circle cx="641" cy="263" r="10" fill="none" stroke="#EF4444" stroke-width="2"/>
+    <path d="M634,259 C638,265 645,266 648,260" fill="none" stroke="#EF4444" stroke-width="1.6"/>
+    <path d="M635,268 C640,263 646,264 648,269" fill="none" stroke="#EF4444" stroke-width="1.6"/>
+    <!-- 悬着的线头：卷着，不碰任何词 -->
+    <path d="M641,273 C648,292 628,306 612,298" fill="none" stroke="#EF4444" stroke-width="1.8" stroke-linecap="round"/>
+  </g>
+
+  <!-- 手写批注：少量、红橙蓝 -->
+  <text x="586" y="238" font-size="17" fill="#EF4444">连哪个？</text>
+  <text x="518" y="72" font-size="16" fill="#2563EB">这是什么关系？</text>
+</svg>

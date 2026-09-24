@@ -1,0 +1,56 @@
+<style>
+:root { --text:#292524; --text-muted:#57534E; --border:rgba(41,37,36,0.14); --brand:#92400E; --brand-soft:#FBF3E4; --font:"Microsoft YaHei","PingFang SC",sans-serif; }
+.widget { color:var(--text); font:400 14px/20px var(--font); width:100%; }
+.card { box-sizing:border-box; width:100%; background:#fff; border:1px solid var(--border); border-radius:12px; padding:10px 0 8px; }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="explanation-panel">
+  <section class="card">
+    <svg viewBox="0 0 680 186" style="width:684px;height:186px;display:block" role="img" aria-label="客户第一句话的谱系">
+      <defs>
+        <marker id="arrB" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto">
+          <path d="M1 1 L7 4 L1 7 Z" fill="#92400E"/>
+        </marker>
+      </defs>
+
+      <!-- 谱系连线 -->
+      <line x1="12" y1="80" x2="668" y2="80" stroke="#E7E5E4" stroke-width="3"/>
+
+      <!-- 四档卡片 -->
+      <g font-family="Microsoft YaHei" text-anchor="middle" font-size="10.5">
+        <rect x="12" y="34" width="150" height="92" rx="10" fill="#FAFAF9" stroke="rgba(41,37,36,0.12)"/>
+        <circle cx="87" cy="80" r="5" fill="#292524"/>
+        <text x="87" y="56" font-size="12" font-weight="600" fill="#292524">方向词</text>
+        <text x="87" y="106" font-size="9" fill="#78716C">只有方向</text>
+        <text x="87" y="119" font-size="9" fill="#78716C">NO.5·14</text>
+
+        <rect x="182" y="34" width="150" height="92" rx="10" fill="#FAFAF9" stroke="rgba(41,37,36,0.12)"/>
+        <circle cx="257" cy="80" r="5" fill="#292524"/>
+        <text x="257" y="56" font-size="12" font-weight="600" fill="#292524">愿望</text>
+        <text x="257" y="106" font-size="9" fill="#78716C">有对象没形状</text>
+        <text x="257" y="119" font-size="9" fill="#78716C">NO.1·15</text>
+
+        <rect x="352" y="34" width="150" height="92" rx="10" fill="#FBF3E4" stroke="rgba(146,64,14,0.3)"/>
+        <circle cx="427" cy="80" r="5" fill="#92400E"/>
+        <text x="427" y="56" font-size="12" font-weight="600" fill="#292524">抱怨</text>
+        <text x="427" y="106" font-size="9" fill="#92400E">疼处指对了</text>
+        <text x="427" y="119" font-size="9" fill="#78716C">NO.8·10</text>
+
+        <rect x="522" y="34" width="150" height="92" rx="10" fill="#FAFAF9" stroke="rgba(41,37,36,0.12)"/>
+        <circle cx="597" cy="80" r="5" fill="#292524"/>
+        <text x="597" y="56" font-size="12" font-weight="600" fill="#292524">半截方案</text>
+        <text x="597" y="106" font-size="9" fill="#78716C">看着最像需求</text>
+        <text x="597" y="119" font-size="9" fill="#78716C">NO.11·22</text>
+      </g>
+
+      <!-- 底部两条注记 -->
+      <g font-family="Microsoft YaHei" text-anchor="middle">
+        <line x1="87" y1="152" x2="500" y2="152" stroke="#92400E" stroke-width="1.6" marker-end="url(#arrB)"/>
+        <rect x="222" y="143" width="130" height="18" rx="9" fill="#FBF3E4"/>
+        <text x="287" y="156" font-size="9.5" fill="#92400E">越具体 · 信息越多</text>
+
+        <line x1="640" y1="152" x2="560" y2="152" stroke="#A8A29E" stroke-width="1.6"/>
+        <text x="597" y="176" font-size="9.5" fill="#78716C">方案半截 · 先拆再用</text>
+      </g>
+    </svg>
+  </section>
+</div>

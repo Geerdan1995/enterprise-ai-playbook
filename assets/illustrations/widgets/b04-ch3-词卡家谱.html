@@ -1,0 +1,35 @@
+<style>
+:root { --text:#292524; --text-muted:#78716C; --border:rgba(41,37,36,0.14); --brand:#92400E; --brand-soft:#FBF3E4; --radius:8px; --radius-card:12px; --radius-full:999px; --s4:4px; --s8:8px; --s12:12px; --s16:16px; --s20:20px; --font:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif; }
+.widget { color:var(--text); font:400 14px/20px var(--font); width:100%; }
+.card { box-sizing:border-box; width:100%; background:#fff; border:1px solid var(--border); border-radius:var(--radius-card); padding:var(--s20); }
+.tree { display:grid; gap:var(--s12); }
+.head { display:flex; align-items:center; gap:var(--s12); }
+.main { display:inline-flex; align-items:baseline; gap:var(--s8); padding:var(--s8) var(--s16); border:1.5px solid var(--brand); background:var(--brand-soft); border-radius:var(--radius); }
+.main b { color:var(--brand); font:600 18px/26px var(--font); }
+.main span { color:var(--brand); font:400 12px/18px var(--font); }
+.line { flex:1; height:1px; background:var(--border); }
+.kids { display:grid; grid-template-columns:1fr 1fr; gap:var(--s12); }
+.kid { border:1px solid var(--border); border-radius:var(--radius); padding:var(--s12) var(--s16); background:var(--surface); }
+.kid b { font:500 14px/20px var(--font); color:var(--text); }
+.kid span { display:block; font:400 12px/18px var(--font); color:var(--text-muted); margin-top:var(--s4); }
+.k { display:inline-block; margin-right:var(--s4); padding:0 var(--s8); border:1px solid var(--border); border-radius:var(--radius-full); background:#fff; color:var(--text); font:400 12px/22px var(--font); }
+.meta { display:flex; flex-wrap:wrap; gap:var(--s8); margin-top:var(--s12); }
+.mtag { padding:var(--s4) var(--s12); border:1px dashed var(--border); border-radius:var(--radius-full); color:var(--text-muted); font:400 12px/18px var(--font); }
+.mtag b { color:var(--text); font-weight:500; }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="tree-flow">
+  <section class="card">
+    <div class="tree">
+      <div class="head"><span class="main"><b>减速器</b><span>正词 · 词卡上的头一个字</span></span><span class="line"></span></div>
+      <div class="kids">
+        <div class="kid"><b>代 —— 别名都挂到正词底下</b><span><span class="k">减速机</span><span class="k">减速箱</span>查别名，卡片把你送到正词跟前</span></div>
+        <div class="kid"><b>注 —— 指什么，不指什么</b><span>指整机，不指零件。指整机，不指零件</span></div>
+      </div>
+    </div>
+    <div class="meta">
+      <span class="mtag"><b>属分</b>：减速器归谁管，一格一个爹</span>
+      <span class="mtag"><b>凭据</b>：立一个词，得有出处</span>
+      <span class="mtag">1986 年的词卡，就这四样（第3章）</span>
+    </div>
+  </section>
+</div>

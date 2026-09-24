@@ -1,0 +1,30 @@
+<style>
+:root { --text:#292524; --text-muted:#78716C; --border:rgba(41,37,36,0.14); --brand:#92400E; --brand-soft:#FBF3E4; --radius:8px; --radius-card:12px; --radius-full:999px; --s4:4px; --s8:8px; --s12:12px; --s16:16px; --s20:20px; --font:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif; }
+.widget { color:var(--text); font:400 14px/20px var(--font); width:100%; }
+.card { box-sizing:border-box; width:100%; background:#fff; border:1px solid var(--border); border-radius:var(--radius-card); padding:var(--s20); }
+.grid { display:grid; gap:var(--s8); }
+.g { display:grid; grid-template-columns:170px 1fr 150px; gap:var(--s12); align-items:center; border:1px solid var(--border); border-radius:var(--radius); padding:var(--s12) var(--s16); background:var(--surface); }
+.g .nm { font:500 13px/18px var(--font); color:var(--text); }
+.g .nm i { display:block; font:400 11px/16px var(--font); color:var(--text-muted); font-style:normal; }
+.g .why { font:400 12px/18px var(--font); color:var(--text-muted); }
+.g .where { text-align:right; font:500 12px/18px var(--font); color:var(--text); }
+.g[data-verdict="split"] .where, .g[data-verdict="merge"] .where { color:var(--brand); }
+.ledger { margin-top:var(--s16); display:flex; flex-wrap:wrap; gap:var(--s8); }
+.lp { padding:var(--s4) var(--s12); border:1px solid var(--border); border-radius:var(--radius-full); background:var(--surface); font:400 12px/18px var(--font); color:var(--text-muted); }
+.lp b { color:var(--brand); font-weight:600; }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="comparison-cards">
+  <section class="card">
+    <div class="grid">
+      <div class="g"><span class="nm">华信轴承<i>HX-ZC · 华信传动科技</i></span><span class="why">章样相符，三本账一个户头</span><span class="where">洛阳 · 一户</span></div>
+      <div class="g" data-verdict="split"><span class="nm">华信传动设备<i>相似度 0.96，机器排第一</i></span><span class="why">章对不上——联轴器厂，跟轴承不沾边</span><span class="where">常州 · 另立一户</span></div>
+      <div class="g" data-verdict="merge"><span class="nm">华信精工<i>相似度 0.89</i></span><span class="why">执照章与鼎恒同一经营者，个体户换名</span><span class="where">顺德 · 并入鼎恒</span></div>
+    </div>
+    <div class="ledger">
+      <span class="lp">机器管<b>像不像</b>，人管<b>是不是</b></span>
+      <span class="lp">912 码：在用 695 归 511 户</span>
+      <span class="lp">并 44 · 另立 10 · 挂账 13 · 死码 217</span>
+      <span class="lp">"字会重，章不重"（第18章）</span>
+    </div>
+  </section>
+</div>

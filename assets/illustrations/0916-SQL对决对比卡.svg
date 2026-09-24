@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 430" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif">
+  <!-- 底与边框：纸色 + doc-quote 家族 -->
+  <rect x="0" y="0" width="680" height="430" fill="#FAFAF9" stroke="#E7E5E4" stroke-width="1"/>
+  <rect x="0" y="0" width="3" height="430" fill="#92400E"/>
+
+  <!-- 图题 -->
+  <text x="18" y="26" font-size="10.5" font-weight="700" fill="#92400E" letter-spacing="1">图 N ｜ 一百一十六行对一行 —— SQL 与图的当场对决（第5章·2026年6月5日）</text>
+
+  <!-- 左卡：SQL -->
+  <rect x="16" y="42" width="296" height="296" rx="10" fill="#FFFFFF" stroke="#A8A29E" stroke-width="1.2"/>
+  <text x="36" y="72" font-size="14" font-weight="700" fill="#57534E">SQL · 倒查 v3</text>
+  <line x1="36" y1="84" x2="292" y2="84" stroke="#E7E5E4" stroke-width="1"/>
+
+  <circle cx="44" cy="104" r="11" fill="#A8A29E"/>
+  <text x="44" y="108" font-size="10" fill="#FFFFFF" text-anchor="middle">写</text>
+  <text x="64" y="101" font-size="11.5" fill="#1C1917">一百一十六行，五层嵌套</text>
+  <text x="64" y="117" font-size="10" fill="#78716C">写了一天半</text>
+
+  <circle cx="44" cy="146" r="11" fill="#A8A29E"/>
+  <text x="44" y="150" font-size="10" fill="#FFFFFF" text-anchor="middle">改</text>
+  <text x="64" y="143" font-size="11.5" fill="#1C1917">问法改两回，跟着改两回</text>
+  <text x="64" y="159" font-size="10" fill="#78716C">一回改到夜里两点</text>
+
+  <circle cx="44" cy="188" r="11" fill="#A8A29E"/>
+  <text x="44" y="192" font-size="10" fill="#FFFFFF" text-anchor="middle">跑</text>
+  <text x="64" y="185" font-size="11.5" fill="#1C1917">两分十七秒，出五十行</text>
+  <text x="64" y="201" font-size="10" fill="#78716C">还是加过索引的</text>
+
+  <circle cx="44" cy="230" r="11" fill="#A8A29E"/>
+  <text x="44" y="234" font-size="10" fill="#FFFFFF" text-anchor="middle">漏</text>
+  <text x="64" y="227" font-size="11.5" fill="#EF4444">走代理的三台不在里头</text>
+  <text x="64" y="243" font-size="10" fill="#EF4444">"终端用户不在库里"</text>
+
+  <text x="164" y="300" font-size="10" fill="#A8A29E" text-anchor="middle">三月底写的，四月里改到 v3</text>
+
+  <!-- 中缝 VS -->
+  <circle cx="340" cy="190" r="20" fill="#FAFAF9" stroke="#92400E" stroke-width="1.5"/>
+  <text x="340" y="195" font-size="12" font-weight="700" fill="#92400E" text-anchor="middle">VS</text>
+
+  <!-- 右卡：图 -->
+  <rect x="368" y="42" width="296" height="296" rx="10" fill="#FFFBEB" stroke="#D97706" stroke-width="1.5"/>
+  <text x="388" y="72" font-size="14" font-weight="700" fill="#92400E">图 · 一行</text>
+  <line x1="388" y1="84" x2="644" y2="84" stroke="#E7E5E4" stroke-width="1"/>
+
+  <circle cx="396" cy="104" r="11" fill="#D97706"/>
+  <text x="396" y="108" font-size="10" fill="#FFFFFF" text-anchor="middle">写</text>
+  <text x="416" y="101" font-size="11.5" fill="#1C1917">一行查询</text>
+  <text x="416" y="117" font-size="10" fill="#78716C">五分钟</text>
+
+  <circle cx="396" cy="146" r="11" fill="#D97706"/>
+  <text x="396" y="150" font-size="10" fill="#FFFFFF" text-anchor="middle">改</text>
+  <text x="416" y="143" font-size="11.5" fill="#1C1917">挂错一台</text>
+  <text x="416" y="159" font-size="10" fill="#78716C">四十秒删边重挂</text>
+
+  <circle cx="396" cy="188" r="11" fill="#D97706"/>
+  <text x="396" y="192" font-size="10" fill="#FFFFFF" text-anchor="middle">跑</text>
+  <text x="416" y="185" font-size="11.5" fill="#1C1917">头一个批次出结果</text>
+  <text x="416" y="201" font-size="10" fill="#78716C">不到半秒</text>
+
+  <circle cx="396" cy="230" r="11" fill="#D97706"/>
+  <text x="396" y="234" font-size="10" fill="#FFFFFF" text-anchor="middle">全</text>
+  <text x="416" y="227" font-size="11.5" fill="#1C1917">五十三行，去掉重复</text>
+  <text x="416" y="243" font-size="10" fill="#78716C">末三行的客户栏，是矿上的名字</text>
+
+  <text x="516" y="300" font-size="10" fill="#D97706" text-anchor="middle">问法再变，尾巴上挂半行</text>
+
+  <!-- 底条：结论 -->
+  <rect x="16" y="352" width="648" height="58" rx="8" fill="#FFFFFF" stroke="#E7E5E4" stroke-width="1"/>
+  <text x="340" y="376" font-size="11.5" fill="#1C1917" text-anchor="middle">"今天差的不是秒数。"——赢在两样：<tspan font-weight="700" fill="#92400E">写得短，改得快</tspan></text>
+  <text x="340" y="396" font-size="10" fill="#78716C" text-anchor="middle">五百个节点，谁家机器跑都快——差的是写与改（第5章·赵峰）</text>
+</svg>

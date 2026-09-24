@@ -1,0 +1,23 @@
+<style>
+:root { --text:#292524; --text-muted:#78716C; --border:rgba(41,37,36,0.14); --brand:#92400E; --brand-soft:#FBF3E4; --radius:8px; --radius-card:12px; --radius-full:999px; --s4:4px; --s8:8px; --s12:12px; --s16:16px; --s20:20px; --font:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif; }
+.widget { color:var(--text); font:400 14px/20px var(--font); width:100%; }
+.card { box-sizing:border-box; width:100%; background:#fff; border:1px solid var(--border); border-radius:var(--radius-card); padding:var(--s20); }
+.rows { display:grid; gap:var(--s12); }
+.row { border:1px solid var(--border); border-radius:var(--radius); padding:var(--s12) var(--s16); background:var(--surface); }
+.row .who { font:500 14px/20px var(--font); color:var(--text); }
+.row .fact { margin-top:var(--s4); font:400 13px/20px var(--font); color:var(--text-muted); }
+.row .fact em { font-style:normal; color:var(--brand); font-weight:500; }
+.wall { margin-top:var(--s16); display:flex; align-items:baseline; gap:var(--s12); border:1.5px solid var(--brand); background:var(--brand-soft); border-radius:var(--radius); padding:var(--s12) var(--s16); flex-wrap:wrap; }
+.wall b { color:var(--brand); font:500 13px/20px var(--font); }
+.wall span { color:var(--text-muted); font:400 12px/18px var(--font); }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="comparison-cards">
+  <section class="card">
+    <div class="rows">
+      <div class="row"><div class="who">智知云的试点演示</div><div class="fact">答案流出来，列了四个批次号，批次日期、数量、订单号都有，格式漂亮——赵峰一条一条过：<em>"这个批次号，格式对，日期看着也合理——ERP 里没有。"</em></div></div>
+      <div class="row"><div class="who">SQL 倒查，改到 v3</div><div class="fact">写了一天半；问法一变就得重写。<em>"卡在东西之间的关系没人说清楚——名字对不上，路径得人先想。"</em></div></div>
+      <div class="row"><div class="who">小夏的检索试验</div><div class="fact">喂五条，让它答六条。对完她说：<em>"五行的批次号是对的，六行是编的。"</em></div></div>
+    </div>
+    <div class="wall"><b>名字对不上、数没个准、对错没人管</b><span>——全公司没说清楚过（第2章·郑敏写在白板底下的一行字）</span></div>
+  </section>
+</div>

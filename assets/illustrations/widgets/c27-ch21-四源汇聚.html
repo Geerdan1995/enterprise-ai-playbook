@@ -1,0 +1,40 @@
+<style>
+:root { --text:#292524; --text-muted:#57534E; --border:rgba(41,37,36,0.14); --brand:#92400E; --brand-soft:#FBF3E4; --radius:8px; --radius-card:12px; --s16:16px; --font:"Microsoft YaHei","PingFang SC",sans-serif; }
+.widget { color:var(--text); font:400 14px/20px var(--font); width:100%; }
+.card { box-sizing:border-box; width:100%; background:#fff; border:1px solid var(--border); border-radius:var(--radius-card); padding:var(--s16); }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="architecture-elements">
+  <section class="card">
+    <svg viewBox="0 0 680 250" style="width:684px;height:250px;display:block" role="img" aria-label="四条道都通到一台机器">
+      <!-- 中央：机器 -->
+      <g>
+        <rect x="286" y="98" width="108" height="56" rx="8" fill="#FBF3E4" stroke="#92400E" stroke-width="2"/>
+        <text x="340" y="122" font-size="13" fill="#92400E" text-anchor="middle" font-family="Microsoft YaHei" font-weight="600">2304226</text>
+        <text x="340" y="142" font-size="10.5" fill="#57534E" text-anchor="middle" font-family="Microsoft YaHei">审核抽中的那台</text>
+      </g>
+      <!-- 四条道 -->
+      <g stroke="#92400E" stroke-width="1.5" fill="none" stroke-dasharray="6 4">
+        <path d="M120 66 C 190 70, 240 90, 282 106"/>
+        <path d="M560 66 C 490 70, 440 90, 398 106"/>
+        <path d="M120 186 C 190 182, 240 162, 282 146"/>
+        <path d="M560 186 C 490 182, 440 162, 398 146"/>
+      </g>
+      <!-- 四源块 -->
+      <g font-family="Microsoft YaHei" font-size="12" text-anchor="middle">
+        <g><rect x="30" y="40" width="150" height="44" rx="6" fill="#FAF7F2" stroke="#A8A29E" stroke-width="1.3"/><text x="105" y="58" fill="#292524" font-weight="500">链上</text><text x="105" y="76" font-size="10.5" fill="#57534E">试车员：唐守拙</text></g>
+        <g><rect x="500" y="40" width="150" height="44" rx="6" fill="#FAF7F2" stroke="#A8A29E" stroke-width="1.3"/><text x="575" y="58" fill="#292524" font-weight="500">条目</text><text x="575" y="76" font-size="10.5" fill="#57534E">129 条里的一条</text></g>
+        <g><rect x="30" y="168" width="150" height="44" rx="6" fill="#FAF7F2" stroke="#A8A29E" stroke-width="1.3"/><text x="105" y="186" fill="#292524" font-weight="500">原声</text><text x="105" y="204" font-size="10.5" fill="#57534E">44 回里的第 1 回</text></g>
+        <g><rect x="500" y="168" width="150" height="44" rx="6" fill="#FAF7F2" stroke="#A8A29E" stroke-width="1.3"/><text x="575" y="186" fill="#292524" font-weight="500">存档注</text><text x="575" y="204" font-size="10.5" fill="#57534E">HX-2303 批 · 他的名字</text></g>
+      </g>
+      <!-- 脚印点缀（沿路） -->
+      <g fill="#C0392B" opacity="0.55">
+        <circle cx="200" cy="84" r="2.2"/><circle cx="222" cy="92" r="2.2"/>
+        <circle cx="480" cy="84" r="2.2"/><circle cx="458" cy="92" r="2.2"/>
+        <circle cx="200" cy="172" r="2.2"/><circle cx="222" cy="164" r="2.2"/>
+        <circle cx="480" cy="172" r="2.2"/><circle cx="458" cy="164" r="2.2"/>
+      </g>
+      <!-- 底注 -->
+      <text x="340" y="232" font-size="12" fill="#57534E" text-anchor="middle" font-family="Microsoft YaHei">四条道，都通到同一个人（第21章）</text>
+    </svg>
+  </section>
+</div>

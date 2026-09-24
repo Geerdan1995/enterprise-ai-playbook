@@ -1,0 +1,30 @@
+<style>
+:root { --text:#292524; --text-muted:#78716C; --border:rgba(41,37,36,0.14); --brand:#92400E; --brand-soft:#FBF3E4; --radius:8px; --radius-card:12px; --radius-full:999px; --s4:4px; --s8:8px; --s12:12px; --s16:16px; --s20:20px; --font:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif; }
+.widget { color:var(--text); font:400 14px/20px var(--font); width:100%; }
+.card { box-sizing:border-box; width:100%; background:#fff; border:1px solid var(--border); border-radius:var(--radius-card); padding:var(--s20); }
+.chainHead { text-align:center; margin-bottom:var(--s16); }
+.sn { display:inline-block; padding:var(--s4) var(--s16); border:1.5px solid var(--brand); border-radius:var(--radius); background:var(--brand-soft); color:var(--brand); font:600 16px/24px var(--font); letter-spacing:1px; }
+.chainHead .sub { margin-top:var(--s4); font:400 12px/18px var(--font); color:var(--text-muted); }
+.chain { display:grid; gap:0; }
+.link { position:relative; padding:var(--s12) var(--s16) var(--s12) var(--s40); border:1px solid var(--border); border-radius:var(--radius); background:var(--surface); }
+.link + .link { margin-top:var(--s20); }
+.link + .link::before { content:""; position:absolute; left:50%; top:-20px; height:20px; border-left:1.5px solid var(--text-muted); }
+.link + .link::after { content:""; position:absolute; left:calc(50% - 4px); top:-6px; border:4px solid transparent; border-top-color:var(--text-muted); }
+.k { font:400 11px/16px var(--font); color:var(--text-muted); }
+.v { font:500 13px/20px var(--font); color:var(--text); margin-top:2px; }
+.v em { font-style:normal; color:var(--brand); }
+.link[data-tail="1"] { border:1.5px solid var(--brand); background:var(--brand-soft); }
+.link[data-tail="1"] .v { color:var(--brand-text); }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="sequence-diagram">
+  <section class="card">
+    <div class="chainHead"><span class="sn">2304226</span><div class="sub">审核员当场点中的那台 · 2023 年 4 月出厂</div></div>
+    <div class="chain">
+      <div class="link"><span class="k">装配批次</span><div class="v">ZP-2304-19</div></div>
+      <div class="link"><span class="k">试车记录</span><div class="v">试车员：<em>唐守拙</em> —— 空载试车，声音匀</div></div>
+      <div class="link"><span class="k">轴承批次</span><div class="v">HX-2303 · 变更单 GG-23-002 在档</div></div>
+      <div class="link"><span class="k">供应商</span><div class="v">华信 · 三个名字，一个户头</div></div>
+      <div class="link" data-tail="1"><span class="k">去向</span><div class="v">宏峰矿业 · 点蚀，已更换 —— 任抽一台，两三分钟——小夏</div></div>
+    </div>
+  </section>
+</div>

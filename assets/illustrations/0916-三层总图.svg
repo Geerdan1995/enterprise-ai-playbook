@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 620" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif">
+  <!-- 底与边框：纸色 + doc-quote 家族 -->
+  <rect x="0" y="0" width="680" height="620" fill="#FAFAF9" stroke="#E7E5E4" stroke-width="1"/>
+  <rect x="0" y="0" width="3" height="620" fill="#92400E"/>
+
+  <!-- 图题 -->
+  <text x="18" y="26" font-size="10.5" font-weight="700" fill="#92400E" letter-spacing="1">图 N ｜ 总目在上，卡在中间，应用在下 —— 全书知识总图（附录A）</text>
+
+  <!-- 上层：本体 -->
+  <rect x="24" y="44" width="632" height="128" rx="10" fill="#FFFFFF" stroke="#92400E" stroke-width="2"/>
+  <text x="44" y="72" font-size="13.5" font-weight="700" fill="#92400E">本体 · 小说里叫：总目 —— 图纸</text>
+  <text x="44" y="90" font-size="10" fill="#78716C">管规矩，不管数据：哪些词算数、什么关系合法，违反了机器不收</text>
+  <!-- 五要素胶囊 -->
+  <g font-size="10.5" font-weight="700">
+    <rect x="44" y="104" width="112" height="50" rx="8" fill="#FAFAF9" stroke="#92400E" stroke-width="1"/>
+    <text x="100" y="124" fill="#92400E" text-anchor="middle">词</text>
+    <text x="100" y="140" font-size="8.5" font-weight="400" fill="#78716C" text-anchor="middle">正式名</text>
+
+    <rect x="164" y="104" width="112" height="50" rx="8" fill="#FAFAF9" stroke="#92400E" stroke-width="1"/>
+    <text x="220" y="124" fill="#92400E" text-anchor="middle">代</text>
+    <text x="220" y="140" font-size="8.5" font-weight="400" fill="#78716C" text-anchor="middle">别名挂底下</text>
+
+    <rect x="284" y="104" width="112" height="50" rx="8" fill="#FAFAF9" stroke="#92400E" stroke-width="1"/>
+    <text x="340" y="124" fill="#92400E" text-anchor="middle">注</text>
+    <text x="340" y="140" font-size="8.5" font-weight="400" fill="#78716C" text-anchor="middle">指什么，不指什么</text>
+
+    <rect x="404" y="104" width="112" height="50" rx="8" fill="#FAFAF9" stroke="#92400E" stroke-width="1"/>
+    <text x="460" y="124" fill="#92400E" text-anchor="middle">属 / 分</text>
+    <text x="460" y="140" font-size="8.5" font-weight="400" fill="#78716C" text-anchor="middle">一格一个爹</text>
+
+    <rect x="524" y="104" width="112" height="50" rx="8" fill="#FAFAF9" stroke="#92400E" stroke-width="1"/>
+    <text x="580" y="124" fill="#92400E" text-anchor="middle">凭据</text>
+    <text x="580" y="140" font-size="8.5" font-weight="400" fill="#78716C" text-anchor="middle">空口报词不上会</text>
+  </g>
+
+  <!-- 约束线1 -->
+  <line x1="340" y1="172" x2="340" y2="204" stroke="#A8A29E" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="352" y="186" font-size="9.5" fill="#78716C">卡合了，各口的账照旧记 —— 记的时候，用总目的词<tspan fill="#A8A29E">（第16章·第四条规矩）</tspan></text>
+
+  <!-- 中层：知识图谱 -->
+  <rect x="24" y="208" width="632" height="132" rx="10" fill="#FFFFFF" stroke="#D97706" stroke-width="1.5"/>
+  <text x="44" y="236" font-size="13.5" font-weight="700" fill="#B45309">知识图谱 · 小说里叫：连成图的卡和账 —— 建筑</text>
+  <text x="44" y="254" font-size="10" fill="#78716C">照着总目，把各口的事实挂上去：机器、批次、供应商、变更单、客户连成一张网</text>
+  <g font-size="10.5" font-weight="700">
+    <rect x="44" y="268" width="140" height="50" rx="8" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+    <text x="114" y="288" fill="#B45309" text-anchor="middle">节点</text>
+    <text x="114" y="304" font-size="8.5" font-weight="400" fill="#78716C" text-anchor="middle">机器 · 批次 · 供应商</text>
+
+    <rect x="194" y="268" width="140" height="50" rx="8" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+    <text x="264" y="288" fill="#B45309" text-anchor="middle">边</text>
+    <text x="264" y="304" font-size="8.5" font-weight="400" fill="#78716C" text-anchor="middle">单据动词：供应 · 装配 · 发货</text>
+
+    <rect x="344" y="268" width="140" height="50" rx="8" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+    <text x="414" y="288" fill="#B45309" text-anchor="middle">条目</text>
+    <text x="414" y="304" font-size="8.5" font-weight="400" fill="#78716C" text-anchor="middle">症状-部位-原因-方案</text>
+
+    <rect x="494" y="268" width="142" height="50" rx="8" fill="#FFFBEB" stroke="#D97706" stroke-width="1"/>
+    <text x="565" y="288" fill="#B45309" text-anchor="middle">原声</text>
+    <text x="565" y="304" font-size="8.5" font-weight="400" fill="#78716C" text-anchor="middle">劲儿在声儿里</text>
+  </g>
+
+  <!-- 约束线2 -->
+  <line x1="340" y1="340" x2="340" y2="372" stroke="#A8A29E" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="352" y="354" font-size="9.5" fill="#78716C">图要能重演，才有下一层<tspan fill="#A8A29E">（第12章·老蔡："凡是要我认的数，得能重演"）</tspan></text>
+
+  <!-- 下层：应用 -->
+  <rect x="24" y="376" width="632" height="106" rx="10" fill="#FFFBEB" stroke="#E7E5E4" stroke-width="1"/>
+  <text x="44" y="404" font-size="13.5" font-weight="700" fill="#1C1917">应用 · 这张图养来做什么</text>
+  <g font-size="10.5" font-weight="700">
+    <rect x="44" y="418" width="142" height="46" rx="8" fill="#FFFFFF" stroke="#E7E5E4" stroke-width="1"/>
+    <text x="115" y="436" fill="#1C1917" text-anchor="middle">问答</text>
+    <text x="115" y="451" font-size="8.5" font-weight="400" fill="#78716C" text-anchor="middle">带出处，没有就说没有</text>
+
+    <rect x="196" y="418" width="142" height="46" rx="8" fill="#FFFFFF" stroke="#E7E5E4" stroke-width="1"/>
+    <text x="267" y="436" fill="#1C1917" text-anchor="middle">追溯</text>
+    <text x="267" y="451" font-size="8.5" font-weight="400" fill="#78716C" text-anchor="middle">任抽一台，链上走通</text>
+
+    <rect x="348" y="418" width="142" height="46" rx="8" fill="#FFFFFF" stroke="#E7E5E4" stroke-width="1"/>
+    <text x="419" y="436" fill="#1C1917" text-anchor="middle">看板</text>
+    <text x="419" y="451" font-size="8.5" font-weight="400" fill="#78716C" text-anchor="middle">异常前置，红黄牌</text>
+
+    <rect x="500" y="418" width="136" height="46" rx="8" fill="#FFFFFF" stroke="#E7E5E4" stroke-width="1"/>
+    <text x="568" y="436" fill="#1C1917" text-anchor="middle">审核</text>
+    <text x="568" y="451" font-size="8.5" font-weight="400" fill="#78716C" text-anchor="middle">答得出缺在哪儿</text>
+  </g>
+
+  <!-- 图脚：规模注 + 叶老引文 -->
+  <text x="24" y="508" font-size="9.5" fill="#78716C">规模：五百一十九个节点起头（第5章·赵峰手工喂）→ 三千八百多台合龙（第18章）· 一百二十九条条目、四十四回原声（第21章）</text>
+  <line x1="24" y1="522" x2="656" y2="522" stroke="#E7E5E4" stroke-width="1"/>
+  <text x="24" y="544" font-size="10.5" fill="#1C1917">"总目是图纸，卡是砖。<tspan font-weight="700" fill="#92400E">砖，你们有的是；缺的，是那张图。</tspan>"</text>
+  <text x="24" y="560" font-size="9" fill="#A8A29E">—— 叶栖梧，2027年3月1日，档案室（第16章）</text>
+
+  <!-- 箭头定义 -->
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#A8A29E"/>
+    </marker>
+  </defs>
+</svg>

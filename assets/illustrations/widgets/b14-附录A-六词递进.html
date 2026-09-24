@@ -1,0 +1,30 @@
+<style>
+:root { --text:#292524; --text-muted:#78716C; --border:rgba(41,37,36,0.14); --brand:#92400E; --brand-soft:#FBF3E4; --radius:8px; --radius-card:12px; --radius-full:999px; --s4:4px; --s8:8px; --s12:12px; --s16:16px; --s20:20px; --font:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif; }
+.widget { color:var(--text); font:400 14px/20px var(--font); width:100%; }
+.card { box-sizing:border-box; width:100%; background:#fff; border:1px solid var(--border); border-radius:var(--radius-card); padding:var(--s20); }
+.ladder { display:grid; grid-template-columns:repeat(3,1fr); gap:var(--s20) var(--s12); }
+.rung { border:1px solid var(--border); border-radius:var(--radius); padding:var(--s12); background:var(--surface); position:relative; }
+.rung .no { font:400 11px/16px var(--font); color:var(--text-muted); }
+.rung b { display:block; margin-top:var(--s4); font:500 14px/20px var(--font); color:var(--text); }
+.rung span { display:block; margin-top:var(--s4); font:400 11px/16px var(--font); color:var(--text-muted); }
+.rung[data-last="1"] { border:1.5px solid var(--brand); background:var(--brand-soft); }
+.rung[data-last="1"] b { color:var(--brand); }
+.link2 { display:flex; align-items:center; justify-content:center; color:var(--text-muted); font-size:13px; padding:0; }
+.r3 { margin-top:var(--s12); display:grid; grid-template-columns:repeat(3,1fr); gap:var(--s20) var(--s12); }
+.rung[data-last="2"] { border:1.5px solid var(--brand); background:var(--brand-soft); }
+.rung[data-last="2"] b { color:var(--brand); }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="architecture-elements">
+  <section class="card">
+    <div class="ladder">
+      <div class="rung"><span class="no">第一幕 · 发问</span><b>什么算数</b><span>哪份文件现行，哪个数是真的</span></div>
+      <div class="rung"><span class="no">第二幕 · 旧办法</span><b>口径</b><span>一个词一行注，指什么不指什么</span></div>
+      <div class="rung"><span class="no">第二幕 · 起步</span><b>图思维</b><span>五百个节点连出第一张图</span></div>
+    </div>
+    <div class="r3">
+      <div class="rung"><span class="no">第三、四幕 · 各家长账</span><b>正本</b><span>六本账撞车，问出哪本是正本</span></div>
+      <div class="rung" data-last="2"><span class="no">第五幕 · 立规矩</span><b>总目</b><span>对词开工，三十七个词起头</span></div>
+      <div class="rung" data-last="1"><span class="no">第五幕 · 成图</span><b>知识图谱</b><span>三千八百多台，全在图上</span></div>
+    </div>
+  </section>
+</div>

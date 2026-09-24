@@ -1,0 +1,67 @@
+<style>
+:root { --text:#292524; --text-muted:#57534E; --border:rgba(41,37,36,0.14); --brand:#92400E; --brand-soft:#FBF3E4; --font:"Microsoft YaHei","PingFang SC",sans-serif; }
+.widget { color:var(--text); font:400 14px/20px var(--font); width:100%; }
+.card { box-sizing:border-box; width:100%; background:#fff; border:1px solid var(--border); border-radius:12px; padding:10px 0 8px; }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="explanation-panel">
+  <section class="card">
+    <svg viewBox="0 0 680 250" style="width:684px;height:250px;display:block" role="img" aria-label="效果的价值四层阶梯与三样硬通货">
+      <defs>
+        <marker id="arr41" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto">
+          <path d="M1 1 L7 4 L1 7 Z" fill="#A8A29E"/>
+        </marker>
+      </defs>
+      <g font-family="Microsoft YaHei">
+        <!-- 左侧纵轴：越往上越难造假 -->
+        <line x1="18" y1="212" x2="18" y2="60" stroke="#A8A29E" stroke-width="1.6" marker-end="url(#arr41)"/>
+        <text x="18" y="48" font-size="9.5" font-weight="700" fill="#92400E" text-anchor="middle">难造假</text>
+        <text x="18" y="228" font-size="9.5" fill="#78716C" text-anchor="middle">易报出</text>
+
+        <!-- 阶梯四层：底边对齐 y=216，顶边逐级抬高 -->
+        <rect x="34" y="172" width="122" height="44" rx="8" fill="#FAFAF9" stroke="rgba(41,37,36,0.18)"/>
+        <text x="95" y="192" font-size="12.5" font-weight="700" fill="#292524" text-anchor="middle">时间压缩</text>
+        <text x="95" y="207" font-size="9" fill="#78716C" text-anchor="middle">同一件事·前后计时</text>
+
+        <rect x="168" y="132" width="122" height="84" rx="8" fill="#FBF3E4" stroke="rgba(146,64,14,0.28)"/>
+        <text x="229" y="152" font-size="12.5" font-weight="700" fill="#292524" text-anchor="middle">时间重分配</text>
+        <text x="229" y="167" font-size="9" fill="#78716C" text-anchor="middle">省下的时间去哪儿</text>
+        <text x="229" y="182" font-size="9" fill="#92400E" text-anchor="middle">执行→判断·沟通</text>
+        <text x="229" y="197" font-size="9" fill="#92400E" text-anchor="middle">KPI随之调整</text>
+
+        <rect x="302" y="92" width="122" height="124" rx="8" fill="#F3E3C9" stroke="rgba(146,64,14,0.32)"/>
+        <text x="363" y="112" font-size="12.5" font-weight="700" fill="#292524" text-anchor="middle">个人经验组织化</text>
+        <text x="363" y="127" font-size="9" fill="#57534E" text-anchor="middle">本事离开人也能用</text>
+        <text x="363" y="145" font-size="9" fill="#57534E" text-anchor="middle">个人经验→组织经验</text>
+        <text x="363" y="160" font-size="9" fill="#57534E" text-anchor="middle">换人·活不掉线</text>
+        <text x="363" y="175" font-size="9" fill="#57534E" text-anchor="middle">内容·数据成资产</text>
+
+        <rect x="436" y="52" width="122" height="164" rx="8" fill="#292524"/>
+        <text x="497" y="72" font-size="12.5" font-weight="700" fill="#FAF7F2" text-anchor="middle">企业长出AI能力</text>
+        <text x="497" y="87" font-size="9" fill="#D6CCC0" text-anchor="middle">客户自己动手</text>
+        <text x="497" y="105" font-size="8.5" fill="#EDE6DC" text-anchor="middle">行政同事自建Agent·NO.14</text>
+        <text x="497" y="120" font-size="8.5" fill="#EDE6DC" text-anchor="middle">流程沉淀成Skill·NO.4</text>
+        <text x="497" y="135" font-size="8.5" fill="#EDE6DC" text-anchor="middle">Spec内部复用·NO.7</text>
+        <text x="497" y="150" font-size="8.5" fill="#EDE6DC" text-anchor="middle">老板自己用AI·NO.11</text>
+
+        <!-- 各层案号 -->
+        <text x="95" y="231" font-size="8.5" fill="#78716C" text-anchor="middle">NO.2·3·4·5·6·9·10</text>
+        <text x="95" y="243" font-size="8.5" fill="#78716C" text-anchor="middle">NO.14·17·18·21·22·24</text>
+        <text x="229" y="235" font-size="8.5" fill="#78716C" text-anchor="middle">NO.2·3·5·9·15·16·19·23</text>
+        <text x="363" y="235" font-size="8.5" fill="#78716C" text-anchor="middle">NO.1·3·6·12·13·19·21·24</text>
+        <text x="497" y="235" font-size="8.5" fill="#78716C" text-anchor="middle">NO.2·4·7·11·14·19·24</text>
+
+        <!-- 右侧硬通货 -->
+        <text x="621" y="46" font-size="10.5" font-weight="700" fill="#92400E" text-anchor="middle">硬通货</text>
+        <rect x="566" y="58" width="110" height="34" rx="6" fill="#FAFAF9" stroke="rgba(41,37,36,0.16)"/>
+        <text x="621" y="72" font-size="10" font-weight="700" fill="#292524" text-anchor="middle">第二件事</text>
+        <text x="621" y="85" font-size="8.5" fill="#78716C" text-anchor="middle">NO.2</text>
+        <rect x="566" y="98" width="110" height="34" rx="6" fill="#FAFAF9" stroke="rgba(41,37,36,0.16)"/>
+        <text x="621" y="112" font-size="10" font-weight="700" fill="#292524" text-anchor="middle">亲口认账</text>
+        <text x="621" y="125" font-size="8.5" fill="#78716C" text-anchor="middle">NO.8</text>
+        <rect x="566" y="138" width="110" height="34" rx="6" fill="#FAFAF9" stroke="rgba(41,37,36,0.16)"/>
+        <text x="621" y="152" font-size="10" font-weight="700" fill="#292524" text-anchor="middle">企业自立</text>
+        <text x="621" y="165" font-size="8.5" fill="#78716C" text-anchor="middle">NO.4·14</text>
+      </g>
+    </svg>
+  </section>
+</div>

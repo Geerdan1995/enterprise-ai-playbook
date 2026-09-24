@@ -1,0 +1,41 @@
+<style>
+:root { --text:#292524; --text-muted:#78716C; --border:rgba(41,37,36,0.14); --brand:#92400E; --brand-soft:#FBF3E4; --radius:8px; --radius-card:12px; --radius-full:999px; --s4:4px; --s8:8px; --s12:12px; --s16:16px; --s20:20px; --font:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif; }
+.widget { color:var(--text); font:400 14px/20px var(--font); width:100%; }
+.card { box-sizing:border-box; width:100%; background:#fff; border:1px solid var(--border); border-radius:var(--radius-card); padding:var(--s20); }
+.cols { display:grid; grid-template-columns:1fr 1fr; gap:var(--s16); }
+.col { border:1px solid var(--border); border-radius:var(--radius); padding:var(--s16); background:var(--surface); }
+.col[data-hot="1"] { border:1.5px solid var(--brand); background:var(--brand-soft); }
+.colTitle { font:500 14px/20px var(--font); color:var(--text); }
+.rows { margin-top:var(--s12); display:grid; gap:var(--s8); }
+.r { display:grid; grid-template-columns:28px 1fr; gap:var(--s8); align-items:baseline; }
+.r i { font:400 12px/18px var(--font); color:var(--text-muted); font-style:normal; }
+.r span { font:400 13px/20px var(--font); color:var(--text); }
+.r span em { font-style:normal; color:var(--brand); font-weight:500; }
+.foot { margin-top:var(--s16); display:flex; align-items:center; gap:var(--s12); }
+.tag { padding:var(--s4) var(--s12); border:1px solid var(--border); border-radius:var(--radius-full); color:var(--text-muted); font:400 12px/18px var(--font); }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="comparison-cards">
+  <section class="card">
+    <div class="cols">
+      <div class="col">
+        <div class="colTitle">SQL · 倒查 v3</div>
+        <div class="rows">
+          <div class="r"><i>写</i><span>116 行，五层嵌套，写了一天半</span></div>
+          <div class="r"><i>改</i><span>问法改两回跟着改两回，<em>改到夜里两点</em></span></div>
+          <div class="r"><i>跑</i><span>2 分 17 秒，出 50 行</span></div>
+          <div class="r"><i>漏</i><span>走代理的 3 台，够不着</span></div>
+        </div>
+      </div>
+      <div class="col" data-hot="1">
+        <div class="colTitle">图 · 一行查询</div>
+        <div class="rows">
+          <div class="r"><i>写</i><span>1 行，五分钟</span></div>
+          <div class="r"><i>改</i><span>挂错一台，删边重挂 <em>40 秒</em></span></div>
+          <div class="r"><i>跑</i><span>头一批出结果不到半秒，共 53 行</span></div>
+          <div class="r"><i>全</i><span>矿上那 3 台，都在</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="foot"><span class="tag">同一道题，2026 年 6 月 5 日当场对（第5章）</span><span class="tag">“五百个节点，谁家机器跑都快”——赵峰（第5章）</span></div>
+  </section>
+</div>

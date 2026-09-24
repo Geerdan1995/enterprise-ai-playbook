@@ -1,0 +1,22 @@
+<style>
+:root { --surface:#FAF7F2; --text:#292524; --text-muted:#78716C; --border:rgba(41,37,36,0.14); --brand:#92400E; --brand-soft:#FBF3E4; --radius:8px; --radius-card:12px; --radius-full:999px; --s4:4px; --s8:8px; --s12:12px; --s16:16px; --s20:20px; --font:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif; }
+.widget { color:var(--text); font:400 14px/20px var(--font); width:100%; }
+.card { box-sizing:border-box; width:100%; background:#fff; border:1px solid var(--border); border-radius:var(--radius-card); padding:var(--s20); }
+.board { border:1.5px solid var(--border); border-radius:var(--radius); padding:var(--s16); display:grid; grid-template-columns:repeat(5,1fr); gap:var(--s12); background:var(--surface); }
+.wd { display:flex; align-items:center; justify-content:center; min-height:44px; padding:var(--s4) var(--s8); background:#fff; border:1px solid var(--border); border-radius:var(--radius); color:var(--text); font:500 13px/18px var(--font); text-align:center; }
+.wd[data-hot="1"] { border:1.5px solid var(--brand); background:var(--brand-soft); color:var(--brand); }
+.ghost { display:flex; align-items:center; justify-content:center; min-height:44px; border:1.5px dashed var(--border); border-radius:var(--radius); color:var(--text-muted); font:400 12px/18px var(--font); }
+.foot { display:flex; align-items:center; gap:var(--s12); margin-top:var(--s16); }
+.tag { display:inline-flex; padding:var(--s4) var(--s12); background:var(--brand-soft); border:1px solid var(--brand); border-radius:var(--radius-full); color:var(--brand); font:500 12px/18px var(--font); }
+.note { color:var(--text-muted); font:400 12px/18px var(--font); }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="architecture-elements">
+  <section class="card">
+    <div class="board">
+      <span class="wd">宏峰矿业</span><span class="wd" data-hot="1">JS-1100</span><span class="wd">2023·3</span><span class="wd">老唐</span><span class="wd">晋北煤业</span>
+      <span class="wd" data-hot="1">华信轴承</span><span class="wd">热处理</span><span class="wd">作废文件</span><span class="wd">387</span><span class="wd">462</span>
+      <span class="ghost">这条线，什么意思？</span><span class="ghost">供应？投诉？</span><span class="ghost">装配过？提醒过？</span><span class="ghost">客户，写不写？</span><span class="ghost">387 还是 462？</span>
+    </div>
+    <div class="foot"><span class="tag">最后什么线也没拉</span><span class="note">每一条线，都得先回答“这是什么意思”（第1章）</span></div>
+  </section>
+</div>

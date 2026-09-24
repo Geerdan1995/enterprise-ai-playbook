@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>dynamic-ui 三层总图</title>
+<style>body { margin: 0; padding: 24px; background: #F7F7F8; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; }</style>
+</head>
+<body>
+<style>
+:root {
+  color-scheme: light;
+  --surface: #F7F7F8;
+  --surface-muted: #EFEFF2;
+  --text: #171717;
+  --text-muted: #52525B;
+  --border: rgba(23, 23, 23, 0.12);
+  --brand: #4B3FE3;
+  --brand-soft: #F2F7FF;
+  --brand-text: #1A1759;
+  --radius: 8px;
+  --radius-card: 12px;
+  --radius-full: 999px;
+  --spacer-4: 4px; --spacer-8: 8px; --spacer-12: 12px; --spacer-16: 16px; --spacer-20: 20px; --spacer-24: 24px;
+  --font-sans: "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --weight-regular: 400; --weight-medium: 500; --weight-strong: 600;
+  --text-caption: 12px/18px; --text-body: 14px/20px; --text-title: 16px/24px;
+}
+:root[data-widget-theme="dark"] {
+  color-scheme: dark;
+  --surface: #171717; --surface-muted: #262626; --text: #E5E5E5; --text-muted: #A1A1AA;
+  --border: rgba(229, 229, 229, 0.12); --brand: #6054F1; --brand-soft: #1A1759; --brand-text: #CFD8FF;
+}
+.widget { color: var(--text); background: transparent; font: var(--weight-regular) var(--text-body) var(--font-sans); width: 100%; }
+.card { box-sizing: border-box; width: 100%; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-card); padding: var(--spacer-20); }
+.title { margin: 0 0 var(--spacer-16); color: var(--text); font: var(--weight-medium) var(--text-title) var(--font-sans); }
+.layer { box-sizing: border-box; border: 1px dashed var(--border); border-radius: var(--radius); padding: var(--spacer-16); background: color-mix(in srgb, var(--surface) 84%, transparent); }
+.layerHead { display: flex; align-items: baseline; gap: var(--spacer-8); flex-wrap: wrap; }
+.layerName { color: var(--text); font: var(--weight-medium) var(--text-body) var(--font-sans); }
+.layerAlias { color: var(--text-muted); font: var(--weight-regular) var(--text-caption) var(--font-sans); }
+.pills { display: flex; flex-wrap: wrap; gap: var(--spacer-8); margin-top: var(--spacer-12); }
+.pill { display: inline-flex; align-items: baseline; gap: var(--spacer-4); padding: var(--spacer-4) var(--spacer-12); background: var(--surface); border: 1px solid color-mix(in srgb, var(--border) 92%, transparent); border-radius: var(--radius-full); }
+.pill b { color: var(--text); font: var(--weight-medium) var(--text-caption) var(--font-sans); }
+.pill span { color: var(--text-muted); font: var(--weight-regular) var(--text-caption) var(--font-sans); }
+.layer[data-focus="brand"] { border-color: var(--brand); background: color-mix(in srgb, var(--brand) 5%, var(--surface)); }
+.layer[data-focus="brand"] .layerName { color: var(--brand-text); }
+.edge { display: grid; grid-template-columns: 24px 1fr; align-items: center; gap: var(--spacer-12); padding: var(--spacer-8) 0 var(--spacer-8) var(--spacer-24); }
+.edgeSvg { width: 24px; height: 56px; overflow: visible; }
+.edgePath { fill: none; stroke: var(--text-muted); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.edgeLabel { justify-self: start; display: inline-flex; padding: var(--spacer-4) var(--spacer-12); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-full); color: var(--text); font: var(--weight-medium) var(--text-caption) var(--font-sans); }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="architecture-elements">
+  <section class="card" aria-label="知识图谱与本体论三层结构">
+    <h3 class="title">总目在上，卡在中间，应用在下</h3>
+
+    <section class="layer" aria-label="本体层">
+      <div class="layerHead"><span class="layerName">本体</span><span class="layerAlias">小说里叫：总目 · 定规矩</span></div>
+      <div class="pills">
+        <span class="pill"><b>词</b><span>正式名</span></span>
+        <span class="pill"><b>代</b><span>别名挂底下</span></span>
+        <span class="pill"><b>注</b><span>指什么不指什么</span></span>
+        <span class="pill"><b>属分</b><span>一格一个爹</span></span>
+        <span class="pill"><b>凭据</b><span>空口不上会</span></span>
+      </div>
+    </section>
+
+    <div class="edge" aria-label="约束：用总目的词记">
+      <svg class="edgeSvg" viewBox="0 0 24 56" aria-hidden="true">
+        <defs>
+          <marker id="edgeArrA" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto">
+            <path d="M1 1 L7 4 L1 7 Z" fill="#52525B"/>
+          </marker>
+        </defs>
+        <path class="edgePath" d="M12 4 V48" marker-end="url(#edgeArrA)"/>
+      </svg>
+      <span class="edgeLabel">用总目的词记</span>
+    </div>
+
+    <section class="layer" data-focus="brand" aria-label="知识图谱层">
+      <div class="layerHead"><span class="layerName">知识图谱</span><span class="layerAlias">小说里叫：连成图的卡和账 · 装事实</span></div>
+      <div class="pills">
+        <span class="pill"><b>节点</b><span>机器·批次·供应商</span></span>
+        <span class="pill"><b>边</b><span>单据动词</span></span>
+        <span class="pill"><b>条目</b><span>症状-部位-原因-方案</span></span>
+        <span class="pill"><b>原声</b><span>44 回录音</span></span>
+      </div>
+    </section>
+
+    <div class="edge" aria-label="约束：能重演才有下一层">
+      <svg class="edgeSvg" viewBox="0 0 24 56" aria-hidden="true">
+        <defs>
+          <marker id="edgeArrB" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto">
+            <path d="M1 1 L7 4 L1 7 Z" fill="#52525B"/>
+          </marker>
+        </defs>
+        <path class="edgePath" d="M12 4 V48" marker-end="url(#edgeArrB)"/>
+      </svg>
+      <span class="edgeLabel">能重演，才有下一层</span>
+    </div>
+
+    <section class="layer" aria-label="应用层">
+      <div class="layerHead"><span class="layerName">应用</span><span class="layerAlias">这张图养来做什么</span></div>
+      <div class="pills">
+        <span class="pill"><b>问答</b><span>带出处</span></span>
+        <span class="pill"><b>追溯</b><span>链上走通</span></span>
+        <span class="pill"><b>看板</b><span>红黄牌</span></span>
+        <span class="pill"><b>审核</b><span>答得出缺</span></span>
+      </div>
+    </section>
+  </section>
+</div>
+</body>
+</html>

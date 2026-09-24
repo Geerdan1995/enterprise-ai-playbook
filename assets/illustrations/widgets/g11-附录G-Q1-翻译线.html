@@ -1,0 +1,93 @@
+<style>
+:root { --text:#292524; --text-muted:#57534E; --border:rgba(41,37,36,0.14); --brand:#92400E; --brand-soft:#FBF3E4; --font:"Microsoft YaHei","PingFang SC",sans-serif; }
+.widget { color:var(--text); font:400 14px/20px var(--font); width:100%; }
+.card { box-sizing:border-box; width:100%; background:#fff; border:1px solid var(--border); border-radius:12px; padding:10px 0 8px; }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="explanation-panel">
+  <section class="card">
+    <svg viewBox="0 0 680 318" style="width:684px;height:318px;display:block" role="img" aria-label="Q1翻译线总图">
+      <defs>
+        <marker id="arrA" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto">
+          <path d="M1 1 L7 4 L1 7 Z" fill="#A8A29E"/>
+        </marker>
+      </defs>
+
+      <!-- 三栏栏头 + 栏间箭头 -->
+      <g font-family="Microsoft YaHei" text-anchor="middle">
+        <text x="90" y="22" font-size="12" font-weight="600" fill="#92400E">听来的话</text>
+        <line x1="176" y1="18" x2="246" y2="18" stroke="#A8A29E" stroke-width="2" marker-end="url(#arrA)"/>
+        <text x="334" y="22" font-size="12" font-weight="600" fill="#92400E">现场的活</text>
+        <line x1="436" y1="18" x2="490" y2="18" stroke="#A8A29E" stroke-width="2" marker-end="url(#arrA)"/>
+        <text x="582" y="22" font-size="12" font-weight="600" fill="#92400E">真问题（五类）</text>
+      </g>
+
+      <!-- 第一栏：听来的话的四种长相 -->
+      <g font-family="Microsoft YaHei" text-anchor="middle" font-size="10.5">
+        <rect x="8" y="36" width="164" height="46" rx="8" fill="#FAFAF9" stroke="rgba(41,37,36,0.12)"/>
+        <text x="90" y="54" font-size="11.5" font-weight="600" fill="#292524">方向词</text>
+        <text x="90" y="68" font-size="9" fill="#78716C">只有方向 · NO.5·14</text>
+
+        <rect x="8" y="90" width="164" height="46" rx="8" fill="#FAFAF9" stroke="rgba(41,37,36,0.12)"/>
+        <text x="90" y="108" font-size="11.5" font-weight="600" fill="#292524">愿望</text>
+        <text x="90" y="122" font-size="9" fill="#78716C">有对象没形状 · NO.1·15</text>
+
+        <rect x="8" y="144" width="164" height="46" rx="8" fill="#FAFAF9" stroke="rgba(41,37,36,0.12)"/>
+        <text x="90" y="162" font-size="11.5" font-weight="600" fill="#292524">抱怨</text>
+        <text x="90" y="176" font-size="9" fill="#78716C">疼处指对了 · NO.8·10</text>
+
+        <rect x="8" y="198" width="164" height="46" rx="8" fill="#FAFAF9" stroke="rgba(41,37,36,0.12)"/>
+        <text x="90" y="216" font-size="11.5" font-weight="600" fill="#292524">半截方案</text>
+        <text x="90" y="230" font-size="9" fill="#78716C">方案先定死 · NO.11·22</text>
+
+        <rect x="8" y="252" width="164" height="46" rx="8" fill="#FBF3E4" stroke="rgba(146,64,14,0.25)"/>
+        <text x="90" y="270" font-size="11.5" font-weight="600" fill="#92400E">没提AI</text>
+        <text x="90" y="284" font-size="9" fill="#92400E">运维进场 · NO.2</text>
+      </g>
+
+      <!-- 第二栏：现场的活 -->
+      <g font-family="Microsoft YaHei" text-anchor="middle" font-size="10.5">
+        <rect x="252" y="36" width="164" height="62" rx="8" fill="#FAFAF9" stroke="rgba(41,37,36,0.12)"/>
+        <text x="334" y="56" font-size="11.5" font-weight="600" fill="#292524">看人干活</text>
+        <text x="334" y="71" font-size="9" fill="#78716C">跟岗 · 坐工位旁 · 两视角</text>
+        <text x="334" y="84" font-size="9" fill="#78716C">NO.1·4·8·13</text>
+
+        <rect x="252" y="110" width="164" height="62" rx="8" fill="#FAFAF9" stroke="rgba(41,37,36,0.12)"/>
+        <text x="334" y="130" font-size="11.5" font-weight="600" fill="#292524">让客户演示</text>
+        <text x="334" y="145" font-size="9" fill="#78716C">录屏会 · 看整条链</text>
+        <text x="334" y="158" font-size="9" fill="#78716C">NO.22</text>
+
+        <rect x="252" y="184" width="164" height="62" rx="8" fill="#FAFAF9" stroke="rgba(41,37,36,0.12)"/>
+        <text x="334" y="204" font-size="11.5" font-weight="600" fill="#292524">往下问</text>
+        <text x="334" y="219" font-size="9" fill="#78716C">四连问 · 追到哪一步疼</text>
+        <text x="334" y="232" font-size="9" fill="#78716C">NO.5·8·14·20·23</text>
+
+        <rect x="252" y="258" width="164" height="40" rx="8" fill="#FAFAF9" stroke="rgba(41,37,36,0.12)"/>
+        <text x="334" y="275" font-size="11.5" font-weight="600" fill="#292524">把账算出来</text>
+        <text x="334" y="289" font-size="9" fill="#78716C">NO.6·8·10</text>
+      </g>
+
+      <!-- 第三栏：五个真问题 -->
+      <g font-family="Microsoft YaHei" text-anchor="middle" font-size="10.5">
+        <rect x="496" y="36" width="176" height="48" rx="8" fill="#fff" stroke="#A8A29E" stroke-width="1.2"/>
+        <text x="584" y="55" font-size="11.5" font-weight="600" fill="#292524">知识锁在人脑里</text>
+        <text x="584" y="70" font-size="9" fill="#78716C">7案 · 1·6·12·15·17·19·23</text>
+
+        <rect x="496" y="92" width="176" height="48" rx="8" fill="#fff" stroke="#A8A29E" stroke-width="1.2"/>
+        <text x="584" y="111" font-size="11.5" font-weight="600" fill="#292524">数据散装靠人搬</text>
+        <text x="584" y="126" font-size="9" fill="#78716C">9案 · 3·5·8·10·11·13·16·22·24</text>
+
+        <rect x="496" y="148" width="176" height="48" rx="8" fill="#fff" stroke="#A8A29E" stroke-width="1.2"/>
+        <text x="584" y="167" font-size="11.5" font-weight="600" fill="#292524">重复核对纯耗人</text>
+        <text x="584" y="182" font-size="9" fill="#78716C">4案 · 2·4·9·21</text>
+
+        <rect x="496" y="204" width="176" height="48" rx="8" fill="#fff" stroke="#A8A29E" stroke-width="1.2"/>
+        <text x="584" y="223" font-size="11.5" font-weight="600" fill="#292524">老板看不见经营</text>
+        <text x="584" y="238" font-size="9" fill="#78716C">2+2案 · 主18·20 兼13·24</text>
+
+        <rect x="496" y="260" width="176" height="48" rx="8" fill="#fff" stroke="#A8A29E" stroke-width="1.2"/>
+        <text x="584" y="279" font-size="11.5" font-weight="600" fill="#292524">个人用到组织用</text>
+        <text x="584" y="294" font-size="9" fill="#78716C">2+1案 · 主7·14 兼12</text>
+      </g>
+    </svg>
+  </section>
+</div>

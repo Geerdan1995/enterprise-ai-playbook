@@ -1,0 +1,83 @@
+<style>
+:root { --text:#292524; --text-muted:#57534E; --border:rgba(41,37,36,0.14); --brand:#92400E; --brand-soft:#FBF3E4; --radius:8px; --radius-card:12px; --s8:8px; --s16:16px; --s20:20px; --font:"Microsoft YaHei","PingFang SC",sans-serif; }
+.widget { color:var(--text); font:400 14px/20px var(--font); width:100%; }
+.card { box-sizing:border-box; width:100%; background:#fff; border:1px solid var(--border); border-radius:var(--radius-card); padding:var(--s16); }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="architecture-elements">
+  <section class="card">
+    <svg viewBox="0 0 680 320" style="width:684px;height:320px;display:block" role="img" aria-label="六本账，断桥相望">
+      <defs>
+        <marker id="g1" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto">
+          <path d="M1 1 L7 4 L1 7 Z" fill="#57534E"/>
+        </marker>
+      </defs>
+
+      <!-- 六座账盒：2行3列 -->
+      <g font-family="Microsoft YaHei">
+        <!-- 行1 -->
+        <g>
+          <rect x="30" y="30" width="180" height="64" rx="6" fill="#FAF7F2" stroke="#A8A29E" stroke-width="1.3"/>
+          <text x="120" y="56" font-size="13" fill="#292524" text-anchor="middle" font-weight="500">口径页</text>
+          <text x="120" y="76" font-size="10.5" fill="#57534E" text-anchor="middle">质量部服务器</text>
+        </g>
+        <g>
+          <rect x="250" y="30" width="180" height="64" rx="6" fill="#FAF7F2" stroke="#A8A29E" stroke-width="1.3"/>
+          <text x="340" y="56" font-size="13" fill="#292524" text-anchor="middle" font-weight="500">核销口径表 · 17 条</text>
+          <text x="340" y="76" font-size="10.5" fill="#57534E" text-anchor="middle">财务</text>
+        </g>
+        <g>
+          <rect x="470" y="30" width="180" height="64" rx="6" fill="#FAF7F2" stroke="#A8A29E" stroke-width="1.3"/>
+          <text x="560" y="56" font-size="13" fill="#292524" text-anchor="middle" font-weight="500">故障知识库</text>
+          <text x="560" y="76" font-size="10.5" fill="#57534E" text-anchor="middle">售后</text>
+        </g>
+        <!-- 行2 -->
+        <g>
+          <rect x="30" y="176" width="180" height="64" rx="6" fill="#FAF7F2" stroke="#A8A29E" stroke-width="1.3"/>
+          <text x="120" y="202" font-size="13" fill="#292524" text-anchor="middle" font-weight="500">报价规则本 · 67 条</text>
+          <text x="120" y="222" font-size="10.5" fill="#57534E" text-anchor="middle">技术部</text>
+        </g>
+        <g>
+          <rect x="250" y="176" width="180" height="64" rx="6" fill="#FAF7F2" stroke="#A8A29E" stroke-width="1.3"/>
+          <text x="340" y="202" font-size="13" fill="#292524" text-anchor="middle" font-weight="500">出入登记簿 · 第 31 本</text>
+          <text x="340" y="222" font-size="10.5" fill="#57534E" text-anchor="middle">三号库</text>
+        </g>
+        <g>
+          <rect x="470" y="176" width="180" height="64" rx="6" fill="#FAF7F2" stroke="#A8A29E" stroke-width="1.3"/>
+          <text x="560" y="202" font-size="13" fill="#292524" text-anchor="middle" font-weight="500">编码映射本 · 137 行</text>
+          <text x="560" y="222" font-size="10.5" fill="#57534E" text-anchor="middle">赵峰桌上</text>
+        </g>
+      </g>
+
+      <!-- 盒间断桥：虚线到中间断掉，断口画× -->
+      <g>
+        <path d="M212 62 H 232" fill="none" stroke="#A8A29E" stroke-width="1.3"/>
+        <path d="M246 62 H 248" fill="none" stroke="#A8A29E" stroke-width="1.3"/>
+        <path d="M234 56 L244 68 M244 56 L234 68" stroke="#C0392B" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M432 62 H 452" fill="none" stroke="#A8A29E" stroke-width="1.3"/>
+        <path d="M466 62 H 468" fill="none" stroke="#A8A29E" stroke-width="1.3"/>
+        <path d="M454 56 L464 68 M464 56 L454 68" stroke="#C0392B" stroke-width="1.6" stroke-linecap="round"/>
+        <!-- 上下行之间 -->
+        <path d="M120 96 V 158" fill="none" stroke="#A8A29E" stroke-width="1.3"/>
+        <path d="M120 174 V 176" fill="none" stroke="#A8A29E" stroke-width="1.3"/>
+        <path d="M114 164 L126 172 M126 164 L114 172" stroke="#C0392B" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M560 96 V 158" fill="none" stroke="#A8A29E" stroke-width="1.3"/>
+        <path d="M560 174 V 176" fill="none" stroke="#A8A29E" stroke-width="1.3"/>
+        <path d="M554 164 L566 172 M566 164 L554 172" stroke="#C0392B" stroke-width="1.6" stroke-linecap="round"/>
+      </g>
+
+      <!-- 中央：恒鼎单据绕一圈找不到家 -->
+      <g>
+        <rect x="262" y="112" width="156" height="40" rx="5" fill="#FDE8E4" stroke="#C0392B" stroke-width="1.4"/>
+        <text x="340" y="130" font-size="11.5" fill="#C0392B" text-anchor="middle" font-family="Microsoft YaHei" font-weight="600">恒鼎的账 · 差 120 万</text>
+        <text x="340" y="146" font-size="10.5" fill="#C0392B" text-anchor="middle" font-family="Microsoft YaHei">档案账 260 万 ↔ 流水账 380 万</text>
+        <!-- 绕圈虚线：六个盒都摇头 -->
+        <path d="M262 132 C 180 140, 120 150, 122 158" fill="none" stroke="#C0392B" stroke-width="1.2" stroke-dasharray="4 3"/>
+        <path d="M418 132 C 500 140, 560 150, 558 158" fill="none" stroke="#C0392B" stroke-width="1.2" stroke-dasharray="4 3"/>
+        <path d="M340 108 C 340 100, 340 98, 340 96" fill="none" stroke="#C0392B" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#g1)"/>
+      </g>
+
+      <!-- 底注 -->
+      <text x="340" y="282" font-size="12" fill="#57534E" text-anchor="middle" font-family="Microsoft YaHei">六本账，本本都对。凑到一块儿，没有一本是对的（第13章）</text>
+    </svg>
+  </section>
+</div>

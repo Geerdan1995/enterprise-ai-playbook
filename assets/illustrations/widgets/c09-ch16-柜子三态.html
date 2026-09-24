@@ -1,0 +1,89 @@
+<style>
+:root { --text:#292524; --text-muted:#57534E; --border:rgba(41,37,36,0.14); --brand:#92400E; --brand-soft:#FBF3E4; --radius:8px; --radius-card:12px; --s8:8px; --s16:16px; --s20:20px; --font:"Microsoft YaHei","PingFang SC",sans-serif; }
+.widget { color:var(--text); font:400 14px/20px var(--font); width:100%; }
+.card { box-sizing:border-box; width:100%; background:#fff; border:1px solid var(--border); border-radius:var(--radius-card); padding:var(--s16); }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="architecture-elements">
+  <section class="card">
+    <svg viewBox="0 0 680 300" style="width:684px;height:300px;display:block" role="img" aria-label="合卡两回：柜子的三种状态">
+      <defs>
+        <marker id="h1" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto">
+          <path d="M1 1 L7 4 L1 7 Z" fill="#57534E"/>
+        </marker>
+      </defs>
+
+      <!-- 面板1：1985 柜门大开 -->
+      <g>
+        <rect x="36" y="30" width="176" height="170" rx="6" fill="#FAF7F2" stroke="#A8A29E" stroke-width="1.4"/>
+        <!-- 柜门大开（两门斜开） -->
+        <path d="M46 44 L36 100 L46 156" fill="none" stroke="#A8A29E" stroke-width="2"/>
+        <path d="M202 44 L212 100 L202 156" fill="none" stroke="#A8A29E" stroke-width="2"/>
+        <!-- 散乱的卡 -->
+        <g stroke="#A8A29E" stroke-width="0.9" fill="#fff">
+          <rect x="66" y="70" width="26" height="16" rx="2" transform="rotate(-14 79 78)"/>
+          <rect x="104" y="90" width="26" height="16" rx="2" transform="rotate(9 117 98)"/>
+          <rect x="88" y="120" width="26" height="16" rx="2" transform="rotate(-7 101 128)"/>
+          <rect x="140" y="110" width="26" height="16" rx="2" transform="rotate(12 153 118)"/>
+          <rect x="120" y="146" width="26" height="16" rx="2" transform="rotate(-4 133 154)"/>
+        </g>
+        <text x="124" y="216" font-size="12.5" fill="#57534E" text-anchor="middle" font-family="Microsoft YaHei">1985 · 十一柜一起合</text>
+        <text x="124" y="236" font-size="11" fill="#C0392B" text-anchor="middle" font-family="Microsoft YaHei">没人拍板 · 坐在屋里编 · 一口想吃全</text>
+      </g>
+
+      <!-- 箭头1 -->
+      <path d="M222 110 H 258" fill="none" stroke="#78716C" stroke-width="1.4" marker-end="url(#h1)"/>
+
+      <!-- 面板2：1986 柜子合拢整齐 -->
+      <g>
+        <rect x="262" y="30" width="176" height="170" rx="6" fill="#FAF7F2" stroke="#78716C" stroke-width="1.4"/>
+        <!-- 柜门关好 -->
+        <line x1="274" y1="44" x2="274" y2="156" stroke="#A8A29E" stroke-width="2"/>
+        <line x1="426" y1="44" x2="426" y2="156" stroke="#A8A29E" stroke-width="2"/>
+        <!-- 整齐的卡：一列列竖排 -->
+        <g stroke="#A8A29E" stroke-width="0.9" fill="#fff">
+          <rect x="292" y="60" width="20" height="120" rx="2"/>
+          <rect x="318" y="60" width="20" height="120" rx="2"/>
+          <rect x="344" y="60" width="20" height="120" rx="2"/>
+          <rect x="370" y="60" width="20" height="120" rx="2"/>
+        </g>
+        <g stroke="#D6CFC5" stroke-width="0.8">
+          <line x1="294" y1="78" x2="310" y2="78"/><line x1="294" y1="96" x2="310" y2="96"/><line x1="294" y1="114" x2="310" y2="114"/>
+          <line x1="320" y1="78" x2="336" y2="78"/><line x1="320" y1="96" x2="336" y2="96"/><line x1="320" y1="114" x2="336" y2="114"/>
+          <line x1="346" y1="78" x2="362" y2="78"/><line x1="346" y1="96" x2="362" y2="96"/><line x1="346" y1="114" x2="362" y2="114"/>
+          <line x1="372" y1="78" x2="388" y2="78"/><line x1="372" y1="96" x2="388" y2="96"/><line x1="372" y1="114" x2="388" y2="114"/>
+        </g>
+        <text x="350" y="216" font-size="12.5" fill="#57534E" text-anchor="middle" font-family="Microsoft YaHei">1986 · 先合传动一门</text>
+        <text x="350" y="236" font-size="11" fill="#292524" text-anchor="middle" font-family="Microsoft YaHei">吵出结果当场落字 · 词是吵着定的</text>
+      </g>
+
+      <!-- 箭头2 -->
+      <path d="M448 110 H 484" fill="none" stroke="#78716C" stroke-width="1.4" marker-end="url(#h1)"/>
+
+      <!-- 面板3：2027 屏幕（焦点） -->
+      <g>
+        <rect x="488" y="24" width="156" height="182" rx="8" fill="#FBF3E4" stroke="#92400E" stroke-width="2"/>
+        <!-- 屏幕 -->
+        <rect x="504" y="42" width="124" height="98" rx="4" fill="#fff" stroke="#92400E" stroke-width="1.2"/>
+        <!-- 节点连线小图 -->
+        <g stroke="#92400E" stroke-width="1.1">
+          <line x1="524" y1="70" x2="560" y2="60"/><line x1="524" y1="70" x2="548" y2="98"/><line x1="560" y1="60" x2="600" y2="82"/><line x1="548" y1="98" x2="600" y2="82"/><line x1="548" y1="98" x2="570" y2="122"/><line x1="600" y1="82" x2="570" y2="122"/>
+        </g>
+        <g fill="#92400E">
+          <circle cx="524" cy="70" r="4.5"/><circle cx="560" cy="60" r="4.5"/><circle cx="548" cy="98" r="4.5"/><circle cx="600" cy="82" r="4.5"/><circle cx="570" cy="122" r="4.5"/>
+        </g>
+        <!-- 屏幕脚 -->
+        <path d="M544 140 L538 152 M588 140 L594 152" stroke="#92400E" stroke-width="2"/>
+        <line x1="528" y1="154" x2="604" y2="154" stroke="#92400E" stroke-width="2.4" stroke-linecap="round"/>
+        <text x="566" y="184" font-size="12.5" fill="#92400E" text-anchor="middle" font-family="Microsoft YaHei" font-weight="600">2027 · 总目连成图</text>
+        <text x="566" y="202" font-size="11" fill="#92400E" text-anchor="middle" font-family="Microsoft YaHei">东西还是那个东西，名目换了</text>
+      </g>
+
+      <!-- 底部时间轴 -->
+      <line x1="60" y1="266" x2="620" y2="266" stroke="#A8A29E" stroke-width="1.4"/>
+      <g fill="#57534E">
+        <circle cx="124" cy="266" r="4"/><circle cx="350" cy="266" r="4"/><circle cx="566" cy="266" r="4" fill="#92400E"/>
+      </g>
+      <text x="340" y="290" font-size="11" fill="#57534E" text-anchor="middle" font-family="Microsoft YaHei">设计院四十年的老路，青山用一年走了一遍（第16章）</text>
+    </svg>
+  </section>
+</div>

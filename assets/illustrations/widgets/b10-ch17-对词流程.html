@@ -1,0 +1,38 @@
+<style>
+:root { --text:#292524; --text-muted:#78716C; --border:rgba(41,37,36,0.14); --brand:#92400E; --brand-soft:#FBF3E4; --radius:8px; --radius-card:12px; --radius-full:999px; --s4:4px; --s8:8px; --s12:12px; --s16:16px; --s20:20px; --font:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif; }
+.widget { color:var(--text); font:400 14px/20px var(--font); width:100%; }
+.card { box-sizing:border-box; width:100%; background:#fff; border:1px solid var(--border); border-radius:var(--radius-card); padding:var(--s20); }
+.gate { display:flex; align-items:center; gap:var(--s12); border:1.5px solid var(--brand); border-radius:var(--radius); background:var(--brand-soft); padding:var(--s12) var(--s16); }
+.gate b { color:var(--brand); font:500 14px/20px var(--font); white-space:nowrap; }
+.gate span { color:var(--text-muted); font:400 12px/18px var(--font); }
+.steps { margin-top:var(--s16); display:grid; grid-template-columns:repeat(4,1fr); gap:var(--s8); }
+.st { border:1px solid var(--border); border-radius:var(--radius); padding:var(--s12); background:var(--surface); text-align:center; }
+.st i { display:block; font:400 11px/16px var(--font); color:var(--text-muted); font-style:normal; }
+.st b { display:block; margin-top:var(--s4); font:500 13px/18px var(--font); color:var(--text); }
+.row2 { margin-top:var(--s8); display:grid; grid-template-columns:repeat(3,1fr); gap:var(--s8); padding:0 12%; }
+.done { margin-top:var(--s16); display:flex; flex-wrap:wrap; gap:var(--s8); }
+.dp { padding:var(--s4) var(--s12); border:1px solid var(--border); border-radius:var(--radius-full); background:var(--surface); font:400 12px/18px var(--font); color:var(--text-muted); }
+.dp b { color:var(--brand); font-weight:600; }
+</style>
+<div class="widget" data-dynamic-ui-widget data-template="architecture-elements">
+  <section class="card">
+    <div class="gate"><b>词要进总目，得背着一道题进来</b><span>问题单上没有的词不收——"在跟"就是这么出局的（第17章）</span></div>
+    <div class="steps">
+      <div class="st"><i>范围</i><b>问题单圈定</b></div>
+      <div class="st"><i>机器堆名</i><b>67 组 188 码</b></div>
+      <div class="st"><i>人点头</i><b>看章认凭据</b></div>
+      <div class="st"><i>吵着定</i><b>对词会 · 8 回</b></div>
+    </div>
+    <div class="row2">
+      <div class="st"><i>词卡落字</i><b>词 · 代 · 注</b></div>
+      <div class="st"><i>六口过目</i><b>OA 会签</b></div>
+      <div class="st"><i>受控入柜</i><b>第一分册立住</b></div>
+    </div>
+    <div class="done">
+      <span class="dp"><b>37 个词</b></span>
+      <span class="dp">机型 1 · 部件 23 · 口径 9 · 供应商 4</span>
+      <span class="dp">待核 19 行，凭据齐一组收一组</span>
+      <span class="dp">二十四天，从开工到定稿</span>
+    </div>
+  </section>
+</div>
