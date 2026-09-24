@@ -1,0 +1,391 @@
+/* ============================================================
+   阅读器：三栏布局 ＋ 正文排版 ＋ 本书特有样式钩子
+   （journal 工作日志 / doc-quote 纸面证据 / 题记 / 场景切换等）
+   ============================================================ */
+
+.reader-header-spacer {
+  height: 0;
+}
+.reader-grid {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  max-width: 1600px;
+  margin: auto;
+  align-items: start;
+}
+.chapter-rail {
+  position: sticky;
+  top: 60px;
+  height: calc(100dvh - 60px);
+  overflow-y: auto;
+  border-right: 1px solid var(--line);
+  padding: 30px 16px 28px 22px;
+  scrollbar-width: thin;
+  overscroll-behavior-y: contain;
+}
+.rail-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  font-weight: 750;
+  color: var(--muted);
+  margin: 22px 0 10px;
+}
+.rail-label:first-child {
+  margin-top: 0;
+}
+.chapter-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.chapter-navigation > a {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: var(--muted);
+  padding: 7px 9px;
+  border-radius: 3px;
+}
+.chapter-navigation > a .rail-number {
+  font-weight: 750;
+  min-width: 2.4em;
+  font-variant-numeric: tabular-nums;
+}
+.chapter-navigation > a:hover {
+  background: var(--surface);
+  color: var(--ink);
+}
+.chapter-navigation > a.active {
+  color: var(--ink);
+  background: var(--surface);
+  font-weight: 700;
+  border-left: 2px solid var(--interactive);
+  padding-left: 7px;
+}
+.chapter-navigation > a.external {
+  opacity: 0.55;
+}
+
+/* ===== 正文列 ===== */
+.article-col {
+  padding: 54px 40px 90px;
+}
+.article-body {
+  max-width: 46rem;
+  margin: auto;
+}
+.pager {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  max-width: 46rem;
+  margin: 64px auto 0;
+}
+.pager > a {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px 20px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.pager > a:hover {
+  border-color: var(--interactive);
+  color: var(--ink);
+}
+.pager > a b {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--ink);
+  margin-top: 5px;
+}
+.pager > a.next {
+  text-align: right;
+}
+.pager .disabled {
+  visibility: hidden;
+}
+
+/* ============================================================
+   正文排版（对齐书稿 HTML 的钩子）
+   ============================================================ */
+.prose {
+  font-family: var(--serif);
+  font-size: var(--reading-size);
+  font-weight: 400;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+}
+.prose > p:first-of-type {
+  font-size: 1.1em;
+}
+.prose p {
+  margin-bottom: 1.25em;
+}
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5 {
+  font-family: var(--sans);
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+/* 章标题（.section-title 由书稿自带，含 .num 序号） */
+.prose .section-title {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 0.4em 0 0.2em;
+}
+.prose .section-title .num {
+  color: var(--interactive);
+  margin-right: 0.35em;
+  font-variant-numeric: tabular-nums;
+}
+.prose .section-en {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  margin: 0 0 2.2em;
+}
+
+/* 章首引语 */
+.prose .chapter-epigraph {
+  margin: 0 0 2.6em;
+  padding: 4px 0 4px 18px;
+  border-left: 3px solid var(--interactive);
+  font-size: 0.95em;
+  color: var(--muted);
+}
+.prose .chapter-epigraph .who {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  margin-top: 8px;
+  color: var(--muted);
+}
+
+/* 场景切换 */
+.prose .scene-break {
+  text-align: center;
+  margin: 2.4em 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.6em;
+  text-indent: 0.6em;
+}
+.prose .scene-break::before {
+  content: '◇◇◇';
+}
+
+/* 工作日志（陈临的复盘手记） */
+.prose .journal {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 10px;
+  padding: 20px 24px 14px;
+  margin: 2.2em 0;
+  font-size: 0.92em;
+}
+:root[data-theme='dark'] .prose .journal {
+  background: #2a2618;
+  border-color: #4d4426;
+}
+.prose .journal::before {
+  content: '陈临的工作日志 · ' attr(data-date);
+  display: block;
+  font-family: var(--sans);
+  font-weight: 750;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: #92400e;
+  margin-bottom: 10px;
+}
+:root[data-theme='dark'] .prose .journal::before {
+  color: #fbbf24;
+}
+.prose .journal ul {
+  margin: 4px 0 8px 1.2em;
+  padding: 0;
+}
+.prose .journal li {
+  margin-bottom: 0.5em;
+}
+
+/* 纸面证据（文件／报告／邮件引用块） */
+.prose .doc-quote {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--muted);
+  border-radius: 0 8px 8px 0;
+  padding: 16px 20px 6px;
+  margin: 2em 0;
+  font-size: 0.92em;
+  color: var(--ink);
+}
+.prose .doc-quote .doc-title {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin-bottom: 0.6em;
+}
+
+/* 插图 */
+.prose .figure {
+  margin: 2.4em 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px 18px 12px;
+  background: var(--bg);
+}
+.prose .figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.prose .figcap {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-align: center;
+  padding-top: 10px;
+}
+
+/* 流程链（.flow > .flow-item / .flow-arrow） */
+.prose .flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 8px;
+  margin: 2em 0;
+}
+.prose .flow-item {
+  flex: 1 1 130px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 12px 14px;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+.prose .flow-arrow {
+  align-self: center;
+  color: var(--interactive);
+  font-weight: 800;
+}
+
+/* 提示条与对照块 */
+.prose .tip {
+  border: 1px dashed var(--interactive);
+  border-radius: 8px;
+  padding: 14px 18px 2px;
+  margin: 2em 0;
+  font-size: 0.92em;
+}
+.prose .compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 2em 0;
+}
+.prose .compare-good,
+.prose .compare-bad {
+  border-radius: 8px;
+  padding: 14px 18px 4px;
+  font-size: 0.92em;
+  border: 1px solid var(--line);
+}
+.prose .compare-good {
+  border-left: 3px solid #6a9a39;
+}
+.prose .compare-bad {
+  border-left: 3px solid #c4554d;
+}
+.prose .section-intro {
+  font-size: 1.02em;
+  color: var(--muted);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 1.2em;
+  margin-bottom: 2em;
+}
+
+/* 链接、强调、列表 */
+.prose a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--interactive);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.prose a:hover {
+  color: var(--interactive);
+}
+.prose strong {
+  font-weight: 650;
+}
+.prose ul,
+.prose ol {
+  padding-inline-start: 1.4em;
+  margin: 1.2em 0 1.7em;
+}
+.prose li {
+  margin: 0.55em 0;
+}
+.prose li::marker {
+  color: var(--interactive);
+}
+.prose blockquote {
+  background: var(--surface);
+  border-left: 2px solid var(--interactive);
+  margin: 2em 0;
+  padding: 20px 24px 2px;
+  font-size: 0.95em;
+  border-radius: 0 3px 3px 0;
+}
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2em 0;
+  font-size: 0.88em;
+}
+.prose th,
+.prose td {
+  border: 1px solid var(--line);
+  padding: 9px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+.prose th {
+  font-family: var(--sans);
+  background: var(--surface);
+}
+
+/* ===== 窄屏：侧栏收起为顶部横滑目录 ===== */
+@media (max-width: 980px) {
+  .reader-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .chapter-rail {
+    position: static;
+    height: auto;
+    max-height: 300px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 18px 20px;
+  }
+  .article-col {
+    padding: 36px 20px 70px;
+  }
+  .pager {
+    grid-template-columns: 1fr;
+  }
+  .pager > a.next {
+    text-align: left;
+  }
+}

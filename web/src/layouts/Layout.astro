@@ -1,0 +1,90 @@
+---
+import '@fontsource-variable/manrope';
+import '@fontsource-variable/newsreader';
+import '../styles/global.css';
+import '../styles/reader.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  progress?: boolean;
+}
+const { title, description = '一本小说形式的企业 AI 落地手册。An enterprise AI playbook, told as a novel.', progress = false } = Astro.props;
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} · 大潮汹涌</title>
+    <meta name="description" content={description} />
+    <script is:inline>
+      // 主题先行，避免闪白
+      const t =
+        localStorage.getItem('theme') ??
+        (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.dataset.theme = t;
+      const s = localStorage.getItem('reading-scale');
+      if (s) document.documentElement.style.setProperty('--reading-scale', s);
+    </script>
+  </head>
+  <body>
+    <slot />
+    {
+      progress && (
+        <div class="reading-progress" aria-hidden="true">
+          <div id="progress-bar" />
+        </div>
+      )
+    }
+    <script>
+      // 字号调节
+      const steps = [0.9, 1, 1.1, 1.22];
+      let idx = steps.indexOf(
+        parseFloat(
+          getComputedStyle(document.documentElement).getPropertyValue('--reading-scale') || '1',
+        ),
+      );
+      if (idx < 0) idx = 1;
+      const apply = () => {
+        const v = steps[idx];
+        document.documentElement.style.setProperty('--reading-scale', String(v));
+        localStorage.setItem('reading-scale', String(v));
+        const out = document.getElementById('font-size-value');
+        if (out) out.textContent = `${Math.round(v * 100)}%`;
+      };
+      document.getElementById('font-smaller')?.addEventListener('click', () => {
+        if (idx > 0) {
+          idx--;
+          apply();
+        }
+      });
+      document.getElementById('font-larger')?.addEventListener('click', () => {
+        if (idx < steps.length - 1) {
+          idx++;
+          apply();
+        }
+      });
+
+      // 主题切换
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+        document.documentElement.dataset.theme = next;
+        localStorage.setItem('theme', next);
+      });
+
+      // 阅读进度
+      const bar = document.getElementById('progress-bar');
+      if (bar) {
+        const update = () => {
+          const h = document.documentElement;
+          const max = h.scrollHeight - h.clientHeight;
+          bar.style.transform = `scaleX(${max > 0 ? h.scrollTop / max : 0})`;
+        };
+        addEventListener('scroll', update, { passive: true });
+        update();
+      }
+    </script>
+  </body>
+</html>

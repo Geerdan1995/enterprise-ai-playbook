@@ -1,0 +1,67 @@
+name: deploy-pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "manuscript/**"
+      - "fragments/**"
+      - "assets/**"
+      - "tools/**"
+      - "scripts/**"
+      - "web/**"
+      - ".github/workflows/deploy-pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: 编译书稿（manuscript md → fragments）
+        run: python tools/manuscript.py compile
+
+      - name: 构建 Astro 阅读站
+        working-directory: web
+        env:
+          ASTRO_BASE: /${{ github.event.repository.name }}/
+        run: |
+          npm ci
+          npm run build
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: web/dist
+
+  deploy:
+    # 只在正主仓库发布；fork 可以构建验证但不会碰别人的 Pages
+    if: github.repository == 'Geerdan1995/enterprise-ai-playbook'
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

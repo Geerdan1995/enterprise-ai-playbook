@@ -28,6 +28,11 @@ nul
 __pycache__/
 *.pyc
 node_modules/
-package-lock.json
+/package-lock.json
 Thumbs.db
 .DS_Store
+
+# ===== 在线阅读站（web/）=====
+web/dist/
+web/.astro/
+web/public/assets/

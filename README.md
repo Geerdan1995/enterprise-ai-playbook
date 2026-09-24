@@ -3,6 +3,7 @@
 > **📕 一本小说形式的企业 AI 落地手册。**
 > 🌏 An enterprise AI playbook, told as a novel.
 
+[![在线阅读](https://img.shields.io/badge/🌐_在线阅读-geerdan1995.github.io-success.svg)](https://geerdan1995.github.io/enterprise-ai-playbook/)
 [![PDF 下载](https://img.shields.io/badge/PDF-下载-success.svg)](https://github.com/Geerdan1995/enterprise-ai-playbook/releases)
 [![Version](https://img.shields.io/badge/version-v4.4.12-blue.svg)](scripts/version.json)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/正文-CC%20BY--NC--SA%204.0-green.svg)](LICENSE)
@@ -34,7 +35,8 @@
 
 ## 📖 怎么读
 
-- 🌐 **在线读**：全书正文就在 [manuscript/](manuscript/) 目录，从[编者按](manuscript/00-编者按.md)开始
+- 🌐 **在线读（推荐）**：[geerdan1995.github.io/enterprise-ai-playbook](https://geerdan1995.github.io/enterprise-ai-playbook/) —— 明暗双主题、字号调节、章节导航
+- 📖 **GitHub 上读**：全书正文就在 [manuscript/](manuscript/) 目录，从[编者按](manuscript/00-编者按.md)开始
 - 📥 **下载 PDF**：到 [Releases](https://github.com/Geerdan1995/enterprise-ai-playbook/releases) 拿排版好的整本
 - ⏱️ **只有五分钟**：看下面内容速览，找到你岗位的那几章
 

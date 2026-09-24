@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import { parts, entries, enabledEntries } from '../lib/book';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="一本小说形式的企业 AI 落地手册">
+  <Header />
+  <main class="home">
+    <section class="hero">
+      <span class="hero-kicker"> enterprise-ai-playbook </span>
+      <h1>大潮汹涌</h1>
+      <p class="subtitle">传统制造业在 AI 时代的进化与重生——一本小说形式的企业 AI 落地手册。</p>
+      <p class="tagline">
+        一家华中中型齿轮箱厂，一年时间，35 个真实案例打底。书里没有算法推导，也没有产品选型指南——它讲的是一家工厂怎么把
+        AI 一件一件用起来，用的时候卡在哪儿，卡住的地方是怎么过的。
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href={`${base}read/editor-note/`}>开始阅读 →</a>
+        <a class="btn btn-ghost" href="https://github.com/Geerdan1995/enterprise-ai-playbook/releases">
+          下载整本 PDF
+        </a>
+        <a class="btn btn-ghost" href="https://github.com/Geerdan1995/enterprise-ai-playbook">
+          GitHub 仓库
+        </a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>22 ＋ 2</b><span>章与间章，走完一年全程</span></div>
+        <div class="stat"><b>9</b><span>个附录，从图解到工具箱</span></div>
+        <div class="stat"><b>55</b><span>张插图，画意境不画截图</span></div>
+        <div class="stat"><b>102</b><span>个版本，与 AI 协作逐字留痕</span></div>
+      </div>
+    </section>
+
+    <div id="toc">
+      {
+        parts.map((part) => (
+          <section class="toc-section">
+            <div class="toc-heading">
+              <h2>{part.name}</h2>
+              <small>{part.entries.length} 篇</small>
+            </div>
+            <div class="chapter-grid">
+              {
+                part.entries.map((x) => (
+                  <a class="chapter-card enabled" href={`${base}read/${x.slug}/`}>
+                    <span class="chapter-number">{x.num}</span>
+                    <span class="go">读 →</span>
+                    <h3>{x.title}</h3>
+                    {x.teaser && <p>{x.teaser}</p>}
+                  </a>
+                ))
+              }
+            </div>
+          </section>
+        ))
+      }
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <span>正文 CC BY-NC-SA 4.0 · 构建代码 MIT</span>
+      <a href="https://github.com/Geerdan1995/enterprise-ai-playbook">GitHub</a>
+      <a href="https://github.com/Geerdan1995/enterprise-ai-playbook/blob/main/CHANGELOG.md">
+        102 个版本的修订史
+      </a>
+      <span>万户AI造物（公众号）</span>
+    </div>
+  </footer>
+</Layout>

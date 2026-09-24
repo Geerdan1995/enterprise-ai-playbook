@@ -1,0 +1,29 @@
+---
+const { reader = false } = Astro.props as { reader?: boolean };
+const homeUrl = import.meta.env.BASE_URL;
+---
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="site-title" href={homeUrl}>
+      大潮汹涌
+      <small>小说形式的企业 AI 落地手册</small>
+    </a>
+    <nav class="site-nav">
+      {
+        reader && (
+          <div class="font-size-menu" style="display:flex">
+            <button id="font-smaller" title="减小字号" aria-label="减小字号">A－</button>
+            <span class="font-size-value" id="font-size-value">100%</span>
+            <button id="font-larger" title="增大字号" aria-label="增大字号">A＋</button>
+          </div>
+        )
+      }
+      <a href={homeUrl + '#toc'}>目录</a>
+      <a href="https://github.com/Geerdan1995/enterprise-ai-playbook/releases" target="_blank">
+        下载 PDF
+      </a>
+      <button id="theme-toggle" title="切换明暗" aria-label="切换明暗主题">◐</button>
+    </nav>
+  </div>
+</header>

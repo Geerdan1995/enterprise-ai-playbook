@@ -1,0 +1,69 @@
+---
+import { readFileSync, existsSync } from 'node:fs';
+import { resolve } from 'node:path';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import { enabledEntries, findEntry, neighbors } from '../../lib/book';
+
+export function getStaticPaths() {
+  return enabledEntries.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { prev, next } = neighbors(entry.slug);
+const base = import.meta.env.BASE_URL;
+
+// fragments 在仓库根；构建工作目录是 web/，两级都试以兼容不同启动位置
+const candidates = [resolve('fragments'), resolve('..', 'fragments')];
+const fragmentsDir = candidates.find((d) => existsSync(resolve(d, entry.fragment))) ?? candidates[0];
+
+// fragments 里的图片按 ../assets 相对路径书写，网页里统一改挂到站点根
+let raw = readFileSync(resolve(fragmentsDir, entry.fragment), 'utf-8');
+
+// 附录 A–K 同住一个 fragment，按 h2 锚点拆出本篇（从本篇标题到下一个 section-title 之前）
+if (entry.sectionId) {
+  const start = raw.indexOf(`<h2 class="section-title page-break" id="${entry.sectionId}"`);
+  const next = raw.indexOf('<h2 class="section-title', start + 1);
+  raw = raw.slice(start, next < 0 ? undefined : next);
+}
+
+const html = raw.replaceAll('../assets/', base + 'assets/');
+---
+
+<Layout title={`${entry.num} ${entry.title}`} progress>
+  <Header reader />
+  <main class="reader-grid">
+    <aside class="chapter-rail">
+      <div class="rail-label">目录</div>
+      <nav class="chapter-navigation">
+        {
+          enabledEntries.map((x) => (
+            <a href={`${base}read/${x.slug}/`} class:list={[{ active: x.slug === entry.slug }]}>
+              <span class="rail-number">{x.num}</span>
+              <span>{x.title}</span>
+            </a>
+          ))
+        }
+        <a class="external" href="https://github.com/Geerdan1995/enterprise-ai-playbook">
+          <span class="rail-number">GitHub</span>
+          <span>仓库与整本 PDF ↗</span>
+        </a>
+      </nav>
+    </aside>
+    <div class="article-col">
+      <article class="article-body">
+        <div class="prose" set:html={html} />
+      </article>
+      <nav class="pager">
+        <a href={prev ? `${base}read/${prev.slug}/` : '#'} class:list={[{ disabled: !prev }]}>
+          {prev ? '← 上一篇' : '← 上一篇'}
+          <b>{prev ? `${prev.num} ${prev.title}` : '已经是第一篇'}</b>
+        </a>
+        <a href={next ? `${base}read/${next.slug}/` : '#'} class:list={[{ disabled: !next }, 'next']}>
+          {next ? '下一篇 →' : '下一篇 →'}
+          <b>{next ? `${next.num} ${next.title}` : '已经是最新一篇'}</b>
+        </a>
+      </nav>
+    </div>
+  </main>
+</Layout>
