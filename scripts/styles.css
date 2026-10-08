@@ -790,3 +790,88 @@ strong { font-weight: 600; }
 
 /* 目录独立起页（v1.5.0 编辑器交付后补） */
 .toc { page-break-before: always; }
+
+/* ==================== 图版封面 / 封底（2026-09-24 起，替代文字版封面与尾页） ====================
+   图片为 2:3（1024x1536），A4 为 1:1.414：竖向撑满 297mm、左右各约 6mm 白边，画面零裁切零变形。
+   版本徽标由 build.js 从 version.json 注入（fragment 只留 v1.0.0 占位形状）；旧 .cover / .back-page
+   文字版样式保留未删，如需回退改 fragment 即可。 */
+.cover-image-page {
+  page: cover-page;
+  page-break-after: always;
+  width: 210mm;
+  height: 297mm;
+  background: #FFFFFF;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cover-image-page img {
+  height: 297mm;
+  width: auto;
+  display: block;
+}
+.cover-version-badge {
+  position: absolute;
+  bottom: 6mm;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 8.5pt;
+  letter-spacing: 0.22em;
+  color: rgba(255, 255, 255, 0.8);
+}
+.back-image-page {
+  page: back-page;
+  page-break-before: always;
+  width: 210mm;
+  height: 297mm;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.back-image-page img {
+  height: 297mm;
+  width: auto;
+  display: block;
+}
+/* ---- 两侧模糊延展（2026-10-08 v2，方案一修订：镜像验收未过改模糊垫层）----
+   图 2:3 按 297mm 高撑满后左右各差 6mm。镜像条验收未过（接缝硬边＋可辨识重影），
+   改为整页模糊垫层：同图 cover 放大＋重虚化压暗铺底，清晰原图居中其上，
+   6mm 侧带呈景深式过渡——无接缝线、无重影、零裁切零内容损失。
+   回退＝删掉本段（.back-image-page 的 position:relative 一并撤）恢复白边。 */
+.back-image-page {
+  position: relative;
+}
+/* 垫层 scale 溢出会触发 Chromium 打印整体缩微（v2 实测 96.2%），页内裁断 */
+.cover-image-page,
+.back-image-page {
+  overflow: hidden;
+}
+.cover-image-page img,
+.back-image-page img {
+  position: relative;
+  z-index: 1;
+}
+.cover-image-page::before,
+.back-image-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: blur(28px) brightness(0.88) saturate(1.05);
+  transform: scale(1.08);
+}
+.cover-image-page::before {
+  background-image: url("../assets/cover/front.png");
+}
+.back-image-page::before {
+  background-image: url("../assets/cover/back.png");
+}
+.cover-version-badge {
+  z-index: 2;
+}
