@@ -312,6 +312,7 @@ h4 {
   color: var(--text);
   margin-top: 16px;
   margin-bottom: 6px;
+  page-break-after: avoid;
 }
 
 h5 {
@@ -777,6 +778,13 @@ strong { font-weight: 600; }
   height: auto;
   border: 1px solid #E7E5E4;
   border-radius: 12px;
+}
+.figure svg {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #E7E5E4;
+  border-radius: 12px;
+  background: #FFFFFF;
 }
 .figcap {
   margin-top: 8px;

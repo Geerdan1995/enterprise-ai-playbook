@@ -249,6 +249,11 @@
   width: 100%;
   height: auto;
 }
+.prose .figure svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 .prose .figcap {
   font-family: var(--sans);
   font-size: 0.8rem;
